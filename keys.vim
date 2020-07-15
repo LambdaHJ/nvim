@@ -94,6 +94,8 @@ let which_key_map.l = {
             \'o': 'outline',
             \'g': 'grep project',
             \'w': 'word in current buffer',
+	    \'p': 'project',
+	    \'m': 'bookmark',
             \}
 " Find symbol of current document.
 nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
@@ -104,6 +106,9 @@ nnoremap <silent> <leader>lf  :<C-u>CocList files<cr>
 nnoremap <silent> <leader>lg  :<C-u>CocList grep<CR>
 " Search current word in current buffer
 nnoremap <silent> <leader>lw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+nnoremap <silent> <leader>lm  :<C-u>CocList bookmark<CR>
+
+nnoremap <silent> <leader>lp  :<C-u>CocList project<CR>
 
 " grep word under cursor
 command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
@@ -168,3 +173,15 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 let which_key_map.n = 'explorer'
 nnoremap <silent> <leader>n :CocCommand explorer<CR>
 
+let which_key_map.m = {
+            \'name': '+bookmark',
+            \'t': 'create/delete bookmark',
+            \'n': 'next',
+            \'p': 'preview',
+            \}
+nmap <leader>mt <Plug>(coc-bookmark-toggle)
+nmap <leader>mn <Plug>(coc-bookmark-next)
+nmap <leader>mp <Plug>(coc-bookmark-prev)
+
+let which_key_map./ = 'comment'
+nmap <leader>/ <Plug>(NERDCommenterToggle)

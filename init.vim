@@ -20,6 +20,8 @@ call plug#begin(stdpath('data') . '/plugged')
 
     " git
     Plug 'airblade/vim-gitgutter'
+
+    Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 if filereadable(expand("~/.config/nvim/basic.vim"))

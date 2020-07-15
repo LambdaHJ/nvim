@@ -15,6 +15,7 @@ let g:coc_global_extensions =[
     \ 'coc-yaml',
     \ 'coc-gitignore',
     \ 'coc-explorer',
+    \ 'coc-bookmark',
     \]
 
 " coc 错误信息显示

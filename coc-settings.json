@@ -46,6 +46,6 @@
         "i": "true",
         "o": ["expanded?", "collapse", "expand"],
         "cr": ["expanded?", "collapse", "expand"]
-    }
-
+    },
+    "bookmark.sign": ""
 }
