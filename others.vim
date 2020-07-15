@@ -21,3 +21,18 @@ let g:dashboard_custom_header = [
     \'                         Keep It Simple, Stupid                          ',
     \'',
     \]
+
+let s:dashboard_shortcut={}
+let s:dashboard_shortcut['recently_project'] = 'SPC l p'
+let s:dashboard_shortcut['find_history'] = 'SPC f h'
+let s:dashboard_shortcut['find_file'] = 'SPC l f'
+let s:dashboard_shortcut['find_word'] = 'SPC l g'
+let s:dashboard_shortcut['book_marks'] = 'SPC l m'
+let g:dashboard_custom_section = {
+    \ 'recently_project'     :[' Recently opened project               '.s:dashboard_shortcut['recently_project']],
+    \ 'find_history'         :['ﭯ Recently opened files                 '.s:dashboard_shortcut['find_history']],
+    \ 'find_file'            :[' Find  File                            '.s:dashboard_shortcut['find_file']],
+    \ 'find_word'            :[' Find  word                            '.s:dashboard_shortcut['find_word']],
+    \ 'book_marks'           :[' Jump to book marks                    '.s:dashboard_shortcut['book_marks']],
+    \ }
+

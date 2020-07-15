@@ -5,6 +5,8 @@ set guicursor=
 syntax on
 let g:mapleader="\<Space>"
 
+set clipboard+=unnamedplus
+
 "==========================================
 " UI view
 "==========================================
