@@ -96,6 +96,7 @@ let which_key_map.l = {
             \'w': 'word in current buffer',
 	    \'p': 'project',
 	    \'m': 'bookmark',
+	    \'r': 'rencent',
             \}
 " Find symbol of current document.
 nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
@@ -110,6 +111,8 @@ nnoremap <silent> <leader>lm  :<C-u>CocList bookmark<CR>
 
 nnoremap <silent> <leader>lp  :<C-u>CocList project<CR>
 
+nnoremap <silent> <leader>lr  :<C-u>CocList mru<CR>
+
 " grep word under cursor
 command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
 
@@ -122,11 +125,17 @@ endfunction
 " Keymapping for grep word under cursor with interactive mode
 nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
+
+"==========================================
+" code
+"==========================================
+
 let which_key_map.c = {
             \'name': "+code",
             \'n': 'rename',
             \'f': 'format',
             \'r': 'refactor',
+	    \'c': 'comment',
             \}
 " Symbol renaming.
 nmap <leader>cn <Plug>(coc-rename)
@@ -135,6 +144,10 @@ nmap <leader>cn <Plug>(coc-rename)
 xmap <leader>cf  <Plug>(coc-format)
 
 nmap <leader>cr <Plug>(coc-refactor)
+
+nmap <leader>cc <Plug>(NERDCommenterToggle)
+
+
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
@@ -183,5 +196,3 @@ nmap <leader>mt <Plug>(coc-bookmark-toggle)
 nmap <leader>mn <Plug>(coc-bookmark-next)
 nmap <leader>mp <Plug>(coc-bookmark-prev)
 
-let which_key_map./ = 'comment'
-nmap <leader>/ <Plug>(NERDCommenterToggle)

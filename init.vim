@@ -4,8 +4,6 @@ call plug#begin(stdpath('data') . '/plugged')
     " snippets
     Plug 'honza/vim-snippets'
 
-    " colorscheme
-    Plug 'arcticicestudio/nord-vim'
 
     Plug 'liuchengxu/vim-which-key'
 
@@ -22,6 +20,11 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'airblade/vim-gitgutter'
 
     Plug 'scrooloose/nerdcommenter'
+
+    " colorscheme
+    Plug 'arcticicestudio/nord-vim'
+    Plug 'kaicataldo/material.vim'
+    Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 if filereadable(expand("~/.config/nvim/basic.vim"))

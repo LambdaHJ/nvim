@@ -24,7 +24,7 @@ let g:dashboard_custom_header = [
 
 let s:dashboard_shortcut={}
 let s:dashboard_shortcut['recently_project'] = 'SPC l p'
-let s:dashboard_shortcut['find_history'] = 'SPC f h'
+let s:dashboard_shortcut['find_history'] = 'SPC l r'
 let s:dashboard_shortcut['find_file'] = 'SPC l f'
 let s:dashboard_shortcut['find_word'] = 'SPC l g'
 let s:dashboard_shortcut['book_marks'] = 'SPC l m'

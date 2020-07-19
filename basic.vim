@@ -10,8 +10,10 @@ set clipboard+=unnamedplus
 "==========================================
 " UI view
 "==========================================
+
 set title
 set number
+set background=dark
 colorscheme nord
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转

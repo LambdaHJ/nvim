@@ -47,5 +47,6 @@
         "o": ["expanded?", "collapse", "expand"],
         "cr": ["expanded?", "collapse", "expand"]
     },
-    "bookmark.sign": ""
+    "bookmark.sign": "",
+    "clangd.path": "/Users/lambda/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
 }

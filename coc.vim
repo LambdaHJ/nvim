@@ -11,6 +11,7 @@ let g:coc_global_extensions =[
     \ 'coc-emoji',
     \ 'coc-project',
     \ 'coc-python',
+    \ 'coc-clangd',
     \ 'coc-lists',
     \ 'coc-yaml',
     \ 'coc-gitignore',
@@ -19,8 +20,8 @@ let g:coc_global_extensions =[
     \]
 
 " coc 错误信息显示
-let g:coc_status_error_sign = '✗'
-let g:coc_status_warning_sign = '⚠︎'
+let g:coc_status_error_sign = '✖'
+let g:coc_status_warning_sign = '➤'
 
 " 使用 <tab> 触发补全
 inoremap <silent><expr> <TAB>
