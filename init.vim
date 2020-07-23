@@ -21,6 +21,8 @@ call plug#begin(stdpath('data') . '/plugged')
 
     Plug 'scrooloose/nerdcommenter'
 
+    Plug 'itchyny/vim-cursorword'
+
     " colorscheme
     Plug 'arcticicestudio/nord-vim'
     Plug 'kaicataldo/material.vim'
