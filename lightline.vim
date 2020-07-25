@@ -83,4 +83,3 @@ function! LightlineGitBlame() abort
 endfunction
 
 
-
