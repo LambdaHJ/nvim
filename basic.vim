@@ -70,6 +70,8 @@ set magic
 "==========================================
 
 set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 set autoindent
 set smartindent
@@ -78,3 +80,5 @@ set smartindent
 " move
 "==========================================
 set scrolloff=4
+
+let g:python_host_prog  = '/Users/heikkihuang/.pyenv/shims/python'
