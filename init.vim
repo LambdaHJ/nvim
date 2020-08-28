@@ -29,6 +29,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'arcticicestudio/nord-vim'
     Plug 'kaicataldo/material.vim'
     Plug 'altercation/vim-colors-solarized'
+	Plug 'srcery-colors/srcery-vim'
 call plug#end()
 
 if filereadable(expand("~/.config/nvim/basic.vim"))

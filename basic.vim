@@ -2,6 +2,7 @@
 " global config
 "==========================================
 set guicursor=
+set mouse=nv
 syntax on
 let g:mapleader="\<Space>"
 
@@ -14,7 +15,7 @@ set clipboard+=unnamedplus
 set title
 set number
 set background=dark
-colorscheme nord
+colorscheme srcery
 
 set cmdheight=2
 

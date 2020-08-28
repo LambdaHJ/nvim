@@ -94,12 +94,12 @@ let which_key_map.l = {
             \'o': 'outline',
             \'g': 'grep project',
             \'w': 'word in current buffer',
-	    \'p': 'project',
-	    \'m': 'bookmark',
-	    \'r': 'rencent',
+			\'p': 'project',
+			\'m': 'bookmark',
+			\'r': 'rencent',
             \}
 " Find symbol of current document.
-nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>lo  :<C-u>CocList --auto-preview outline<cr>
 " Find fils of current project.
 nnoremap <silent> <leader>lf  :<C-u>CocList files<cr>
 
@@ -191,8 +191,9 @@ let which_key_map.m = {
             \'t': 'create/delete bookmark',
             \'n': 'next',
             \'p': 'preview',
+			\'a': 'annotate',
             \}
 nmap <leader>mt <Plug>(coc-bookmark-toggle)
 nmap <leader>mn <Plug>(coc-bookmark-next)
 nmap <leader>mp <Plug>(coc-bookmark-prev)
-
+nmap <leader>ma <Plug>(coc-bookmark-annotate)
