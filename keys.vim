@@ -11,10 +11,10 @@ vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 "==========================================
 
 " 选择window
-nnoremap <Leader>1 :1 wincmd w<CR>
-nnoremap <Leader>2 :2 wincmd w<CR>
-nnoremap <Leader>3 :3 wincmd w<CR>
-nnoremap <Leader>4 :4 wincmd w<CR>
+" nnoremap <Leader>1 :1 wincmd w<CR>
+" nnoremap <Leader>2 :2 wincmd w<CR>
+" nnoremap <Leader>3 :3 wincmd w<CR>
+" nnoremap <Leader>4 :4 wincmd w<CR>
 
 " 分屏窗口移动, Smart way to move between windows
 map <C-j> <C-W>j

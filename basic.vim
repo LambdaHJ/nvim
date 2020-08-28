@@ -14,8 +14,9 @@ set clipboard+=unnamedplus
 
 set title
 set number
-set background=dark
-colorscheme srcery
+" set background=dark
+colorscheme solarized
+
 
 set cmdheight=2
 

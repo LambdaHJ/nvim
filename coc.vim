@@ -11,6 +11,7 @@ let g:coc_global_extensions =[
     \ 'coc-emoji',
     \ 'coc-project',
     \ 'coc-python',
+	\ 'coc-rls',
     \ 'coc-clangd',
     \ 'coc-lists',
     \ 'coc-yaml',

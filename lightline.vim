@@ -1,11 +1,11 @@
 let g:lightline = { 
-\    'colorscheme': 'srcery', 
+\    'colorscheme': 'solarized', 
 \    'active': { 
 \        'left': [ 
-\           ['wnum'],
 \           ['mode', 'paste'], 
 \           ['filename'], 
 \           ['curfunction'], 
+\           ['blame'],
 \        ], 
 \        'right': [ 
 \            ['cocstatus'],
@@ -14,11 +14,10 @@ let g:lightline = {
 \        ]
 \    },
 \    'inactive': {
-\        'left': [['wnum']],
+\        'left': [['mode']],
 \        'right': [],
 \    },
 \    'component_function': {
-\        'wnum': 'LightlineNum',
 \        'mode': 'LightlineMode',
 \        'filename': 'LightlineFilename',
 \        'fileencoding': 'LightlineFileencoding',
@@ -37,14 +36,11 @@ let g:lightline = {
 \    'subseparator': { 'left': '', 'right': '' }
 \ }
 
-let s:status_ignore = '^\(coc-explorer\|list\)'
 
-function! LightlineNum()
-    return winnr()
-endfunction
+let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': 'List', 'dashboard': ''}
 
 function! LightlineMode()
-	return &ft !~# s:status_ignore ? lightline#mode() : ''
+	return !has_key(s:panel_ignore, &ft) ? lightline#mode() : get(s:panel_ignore, &ft, '')
 endfunction
 
 function! LightlineReadonly()
@@ -61,25 +57,22 @@ endfunction
 
 function! LightlineFilename()
 	let fname = expand('%:t')
-	return &ft !~# s:status_ignore ?
+	return !has_key(s:panel_ignore, &ft) ?
 		\ (LightlineReadonly() !=# '' ? ' ' . LightlineReadonly() . ' ' : '') .
 		\ (fname !=# '' ? fname . ' '.WebDevIconsGetFileTypeSymbol().' ' : '[No Name]') .
 		\ (LightlineModified() !=# '' ? ' ' . LightlineModified() : '') : ''
 endfunction  
 
 function! LightlineFileencoding()
-	return &ft !~# s:status_ignore ?
+	return !has_key(s:panel_ignore, &ft) ?
                 \(&fenc !=# '' ? &fenc . ' ' . WebDevIconsGetFileFormatSymbol() : &enc. ' ' . WebDevIconsGetFileFormatSymbol() ): ''
 endfunction
 
 function! LightlineLineinfo()
-	return &ft !~# s:status_ignore ?
-        \ ' '.line('.').':'. col('.').'  ' . '☰ '.line('.') * 100 / line('$') . '%' : ''
+	return !has_key(s:panel_ignore, &ft) ? ' '.line('.').':'. col('.').'  ' . '☰ '.line('.') * 100 / line('$') . '%'	 : ''
 endfunction
 
-function! LightlineGitBlame() abort
-  let blame = get(b:, 'coc_git_blame', '')
-  return blame
+function! LightlineGitBlame()
+	let blame = get(b:, 'coc_git_status', '')
+	return blame
 endfunction
-
-
