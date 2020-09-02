@@ -5,6 +5,10 @@
 let g:NERDSpaceDelims=1
 let g:NERDAltDelims_python = 1
 
+" floaterm
+let g:floaterm_position = 'center'
+let g:floaterm_wintype = 'floating'
+
 " indentLine
 let g:indentLine_enabled = 1
 let g:indentLine_char='┆'

@@ -8,9 +8,9 @@ let g:lightline = {
 \           ['blame'],
 \        ], 
 \        'right': [ 
-\            ['cocstatus'],
 \            ['lineinfo'],
 \            ['fileencoding'],
+\            ['cocstatus'],
 \        ]
 \    },
 \    'inactive': {

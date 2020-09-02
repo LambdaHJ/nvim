@@ -21,6 +21,8 @@ colorscheme PaperColor
 
 set cmdheight=1
 
+set laststatus=2
+
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
 set relativenumber number
 au FocusLost * :set norelativenumber number
