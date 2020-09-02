@@ -14,11 +14,12 @@ set clipboard+=unnamedplus
 
 set title
 set number
-" set background=dark
-colorscheme solarized
+set background=light
+" colorscheme solarized
+colorscheme PaperColor
 
 
-set cmdheight=2
+set cmdheight=1
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
 set relativenumber number

@@ -197,3 +197,15 @@ nmap <leader>mt <Plug>(coc-bookmark-toggle)
 nmap <leader>mn <Plug>(coc-bookmark-next)
 nmap <leader>mp <Plug>(coc-bookmark-prev)
 nmap <leader>ma <Plug>(coc-bookmark-annotate)
+
+let which_key_map.t = {
+            \'name': '+terminal',
+            \'c': 'new',
+            \'n': 'next',
+            \'p': 'preview',
+			\'t': 'toggle',
+            \}
+nnoremap <silent> <leader>tc :CocCommand floaterm.new<CR>
+nnoremap <silent> <leader>tn :CocCommand floaterm.next<CR>
+nnoremap <silent> <leader>tp :CocCommand floaterm.prev<CR>
+nnoremap <silent> <leader>tt :CocCommand floaterm.toggle<CR>

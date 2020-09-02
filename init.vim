@@ -24,12 +24,16 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'itchyny/vim-cursorword'
 
 	Plug 'Lokaltog/vim-easymotion'
+	
+	Plug 'kassio/neoterm'
+	
+	Plug 'voldikss/vim-floaterm'
 
     " colorscheme
     Plug 'arcticicestudio/nord-vim'
     Plug 'kaicataldo/material.vim'
     Plug 'altercation/vim-colors-solarized'
-	Plug 'srcery-colors/srcery-vim'
+	Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 if filereadable(expand("~/.config/nvim/basic.vim"))
