@@ -83,9 +83,6 @@ function! s:show_documentation()
 endfunction
 
 
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " goto command
 let which_key_map.g =  {
@@ -151,7 +148,7 @@ nmap <leader>cn <Plug>(coc-rename)
 xmap <leader>cf  <Plug>(coc-format)
 nmap <leader>cr <Plug>(coc-refactor)
 nmap <leader>cc <Plug>(NERDCommenterToggle)
-nnoremap <silent> <leader>ci :CocCommand editor.action.organizeImport<CR>
+nmap <silent> <leader>ci :CocCommand editor.action.organizeImport<CR>
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
@@ -160,8 +157,6 @@ nnoremap <silent> <leader>ci :CocCommand editor.action.organizeImport<CR>
 
 " Remap keys for applying codeAction to the current line.
 " nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -203,3 +198,25 @@ nnoremap <silent> <leader>tc :CocCommand floaterm.new<CR>
 nnoremap <silent> <leader>tn :CocCommand floaterm.next<CR>
 nnoremap <silent> <leader>tp :CocCommand floaterm.prev<CR>
 nnoremap <silent> <leader>tt :CocCommand floaterm.toggle<CR>
+
+let which_key_map.d = {
+            \'name': '+diagnostic',
+            \'n': 'next',
+            \'p': 'prev',
+			\'f': 'fix',
+            \}
+" navigate diagnostics
+nmap <silent> <leader>dp <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>dn <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>df <Plug>(coc-fix-current)
+
+let which_key_map.u = {
+            \'name': '+cursor',
+            \'c': 'position',
+            \'d': 'range/word',
+			\'x': 'operator',
+            \}
+nmap <silent> <leader>uc <Plug>(coc-cursors-position)
+nmap <silent> <leader>ud <Plug>(coc-cursors-word)
+xmap <silent> <leader>ud <Plug>(coc-cursors-range)
+nmap <silent> <leader>ux  <Plug>(coc-cursors-operator)
