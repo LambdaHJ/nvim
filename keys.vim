@@ -7,6 +7,19 @@ nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
 "==========================================
+" Cmd Settings  自定义命令设置
+"==========================================
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+"==========================================
 " HotKey Settings  自定义快捷键设置
 "==========================================
 
@@ -74,7 +87,7 @@ endfunction
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-
+" goto command
 let which_key_map.g =  {
             \'name': '+goto',
             \'gd': 'definition',
@@ -102,15 +115,13 @@ let which_key_map.l = {
 nnoremap <silent> <leader>lo  :<C-u>CocList --auto-preview outline<cr>
 " Find fils of current project.
 nnoremap <silent> <leader>lf  :<C-u>CocList files<cr>
-
 " Search workspace.
 nnoremap <silent> <leader>lg  :<C-u>CocList grep<CR>
 " Search current word in current buffer
 nnoremap <silent> <leader>lw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 nnoremap <silent> <leader>lm  :<C-u>CocList bookmark<CR>
-
+" Search project
 nnoremap <silent> <leader>lp  :<C-u>CocList project<CR>
-
 nnoremap <silent> <leader>lr  :<C-u>CocList mru<CR>
 
 " grep word under cursor
@@ -122,10 +133,6 @@ function! s:GrepArgs(...)
   return join(list, "\n")
 endfunction
 
-" Keymapping for grep word under cursor with interactive mode
-nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
-
-
 "==========================================
 " code
 "==========================================
@@ -135,56 +142,43 @@ let which_key_map.c = {
             \'n': 'rename',
             \'f': 'format',
             \'r': 'refactor',
-	    \'c': 'comment',
+			\'c': 'comment',
+			\'i': 'import',
             \}
 " Symbol renaming.
 nmap <leader>cn <Plug>(coc-rename)
-
 " Formatting selected code.
 xmap <leader>cf  <Plug>(coc-format)
-
 nmap <leader>cr <Plug>(coc-refactor)
-
 nmap <leader>cc <Plug>(NERDCommenterToggle)
-
+nnoremap <silent> <leader>ci :CocCommand editor.action.organizeImport<CR>
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+" nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
+" xmap if <Plug>(coc-funcobj-i)
+" xmap af <Plug>(coc-funcobj-a)
+" omap if <Plug>(coc-funcobj-i)
+" omap af <Plug>(coc-funcobj-a)
 
 " Use <TAB> for selections ranges.
 " NOTE: Requires 'textDocument/selectionRange' support from the language server.
 " coc-tsserver, coc-python are the examples of servers that support it.
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
+" nmap <silent> <TAB> <Plug>(coc-range-select)
+" xmap <silent> <TAB> <Plug>(coc-range-select)
 
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
 
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-let which_key_map.n = 'explorer'
-nnoremap <silent> <leader>n :CocCommand explorer<CR>
+let which_key_map.e = 'explorer'
+nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
 let which_key_map.m = {
             \'name': '+bookmark',
