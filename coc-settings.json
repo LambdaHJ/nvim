@@ -40,6 +40,7 @@
     "coc.preferences.formatOnSaveFiletypes": ["go"],
     "coc.preferences.formatOnType": true,
     "explorer.width": 35,
+	"explorer.position": "floating",
     "explorer.icon.enableNerdfont": true,
     "explorer.file.tabCD": false,
 	"explorer.previewAction.onHover": false,
