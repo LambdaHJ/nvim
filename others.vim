@@ -8,6 +8,8 @@ let g:NERDAltDelims_python = 1
 " floaterm
 let g:floaterm_position = 'center'
 let g:floaterm_wintype = 'floating'
+" hi FloatermBorder ctermbg=Black
+
 
 " indentLine
 let g:indentLine_enabled = 1

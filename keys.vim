@@ -185,6 +185,7 @@ let which_key_map.t = {
             \'n': 'next',
             \'p': 'preview',
 			\'t': 'toggle',
+			\'k': 'close',
             \}
 " nnoremap <silent> <leader>tc :CocCommand floaterm.new<CR>
 " nnoremap <silent> <leader>tn :CocCommand floaterm.next<CR>
@@ -194,6 +195,7 @@ let g:floaterm_keymap_new    = '<leader>tc'
 let g:floaterm_keymap_prev   = '<leader>tn'
 let g:floaterm_keymap_next   = '<leader>tp'
 let g:floaterm_keymap_toggle = '<leader>tt'
+let g:floaterm_keymap_kill   = '<leader>tk'
 
 let which_key_map.d = {
             \'name': '+diagnostic',
