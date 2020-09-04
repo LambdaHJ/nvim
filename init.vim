@@ -17,7 +17,7 @@ call plug#begin(stdpath('data') . '/plugged')
     Plug 'hardcoreplayers/dashboard-nvim'
 
     " git
-    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
 
     Plug 'scrooloose/nerdcommenter'
 

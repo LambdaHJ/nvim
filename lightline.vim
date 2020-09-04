@@ -10,7 +10,7 @@ let g:lightline = {
 \        'right': [ 
 \            ['lineinfo'],
 \            ['fileencoding'],
-\            ['cocstatus'],
+\            ['gitbranch', 'cocstatus'],
 \        ]
 \    },
 \    'inactive': {
@@ -25,6 +25,7 @@ let g:lightline = {
 \        'blame': 'LightlineGitBlame',
 \        'cocstatus': 'coc#status',
 \        'curfunction': 'LightlineFunction',
+\        'gitbranch': 'FugitiveHead',
 \    },
 \    'component_expand': {
 \        'buffers': 'lightline#bufferline#buffers',
