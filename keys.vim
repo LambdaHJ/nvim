@@ -186,10 +186,14 @@ let which_key_map.t = {
             \'p': 'preview',
 			\'t': 'toggle',
             \}
-nnoremap <silent> <leader>tc :CocCommand floaterm.new<CR>
-nnoremap <silent> <leader>tn :CocCommand floaterm.next<CR>
-nnoremap <silent> <leader>tp :CocCommand floaterm.prev<CR>
-nnoremap <silent> <leader>tt :CocCommand floaterm.toggle<CR>
+" nnoremap <silent> <leader>tc :CocCommand floaterm.new<CR>
+" nnoremap <silent> <leader>tn :CocCommand floaterm.next<CR>
+" nnoremap <silent> <leader>tp :CocCommand floaterm.prev<CR>
+" nnoremap <silent> <leader>tt :CocCommand floaterm.toggle i<CR>
+let g:floaterm_keymap_new    = '<leader>tc'
+let g:floaterm_keymap_prev   = '<leader>tn'
+let g:floaterm_keymap_next   = '<leader>tp'
+let g:floaterm_keymap_toggle = '<leader>tt'
 
 let which_key_map.d = {
             \'name': '+diagnostic',
