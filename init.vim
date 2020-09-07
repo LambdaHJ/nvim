@@ -25,9 +25,11 @@ call plug#begin(stdpath('data') . '/plugged')
 
 	Plug 'Lokaltog/vim-easymotion'
 	
-	Plug 'kassio/neoterm'
-	
 	Plug 'voldikss/vim-floaterm'
+	
+	Plug 'haya14busa/incsearch.vim'
+
+	Plug 'yianwillis/vimcdoc'
 
     " colorscheme
     Plug 'arcticicestudio/nord-vim'

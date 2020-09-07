@@ -35,9 +35,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" 去掉搜索高亮
-noremap <silent><leader>/ :nohls<CR>
-
 " 缩进
 nnoremap <tab> >>
 nnoremap <s-tab> <<
@@ -166,6 +163,9 @@ nmap <silent> <leader>ci :CocCommand editor.action.organizeImport<CR>
 
 let which_key_map.e = 'explorer'
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
+
+let which_key_map.r = 'reload'
+nnoremap <silent> <Leader>r :source $MYVIMRC<CR>
 
 let which_key_map.m = {
             \'name': '+bookmark',

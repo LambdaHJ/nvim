@@ -19,8 +19,7 @@ set background=light
 colorscheme PaperColor
 
 
-set cmdheight=1
-
+set cmdheight=2
 set laststatus=2
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
