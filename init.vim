@@ -29,6 +29,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	
 	Plug 'haya14busa/incsearch.vim'
 
+	Plug 'Yggdroot/indentLine'
+
 	Plug 'yianwillis/vimcdoc'
 
     " colorscheme

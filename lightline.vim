@@ -5,12 +5,12 @@ let g:lightline = {
 \           ['mode', 'paste'], 
 \           ['filename'], 
 \           ['curfunction'], 
-\           ['blame'],
+\           ['gitbranch'],
 \        ], 
 \        'right': [ 
 \            ['lineinfo'],
 \            ['fileencoding'],
-\            ['gitbranch', 'cocstatus'],
+\            ['cocstatus'],
 \        ]
 \    },
 \    'inactive': {
@@ -18,20 +18,13 @@ let g:lightline = {
 \        'right': [],
 \    },
 \    'component_function': {
-\        'mode': 'LightlineMode',
+\        'mode': 'LightlineModeOrPlugin',
 \        'filename': 'LightlineFilename',
 \        'fileencoding': 'LightlineFileencoding',
 \        'lineinfo': 'LightlineLineinfo',
-\        'blame': 'LightlineGitBlame',
 \        'cocstatus': 'coc#status',
 \        'curfunction': 'LightlineFunction',
-\        'gitbranch': 'FugitiveHead',
-\    },
-\    'component_expand': {
-\        'buffers': 'lightline#bufferline#buffers',
-\    },
-\    'component_type': {
-\        'buffers': 'tabsel',
+\        'gitbranch': 'LightlineGitBranch',
 \    },
 \    'separator': { 'left': '', 'right': '' },
 \    'subseparator': { 'left': '', 'right': '' }
@@ -40,8 +33,12 @@ let g:lightline = {
 
 let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': 'List', 'dashboard': ''}
 
-function! LightlineMode()
+function! LightlineModeOrPlugin()
 	return !has_key(s:panel_ignore, &ft) ? lightline#mode() : get(s:panel_ignore, &ft, '')
+endfunction
+
+function! LightlineGitBranch()
+	return !has_key(s:panel_ignore, &ft) ? FugitiveHead() : ''
 endfunction
 
 function! LightlineReadonly()
@@ -71,9 +68,4 @@ endfunction
 
 function! LightlineLineinfo()
 	return !has_key(s:panel_ignore, &ft) ? ' '.line('.').':'. col('.').'  ' . '☰ '.line('.') * 100 / line('$') . '%'	 : ''
-endfunction
-
-function! LightlineGitBlame()
-	let blame = get(b:, 'coc_git_status', '')
-	return blame
 endfunction

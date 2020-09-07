@@ -14,9 +14,9 @@ let g:floaterm_wintype = 'floating'
 " indentLine
 let g:indentLine_enabled = 1
 let g:indentLine_char='┆'
-let g:indentLine_fileTypeExclude = ['coc-explorer', 'list','startify','tagbar']
+let g:indentLine_fileTypeExclude = ['coc-explorer','list','startify','tagbar','dashboard']
 let g:indentLine_concealcursor = 'niv'
-let g:indentLine_showFirstIndentLevel =1
+let g:indentLine_showFirstIndentLevel = 1
 let g:dashboard_custom_header = [
     \'      _   _         ____  _ _                  ____        _ _      _    ',
     \'     | \ | | ___   / ___|(_) |_   _____ _ __  | __ ) _   _| | | ___| |_  ',

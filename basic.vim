@@ -46,6 +46,8 @@ set splitright
 set splitbelow
 
 set noshowmode
+set noshowcmd
+set noruler
 set shortmess+=cc
 "==========================================
 " backup && history
