@@ -5,7 +5,6 @@ let g:lightline = {
 \           ['mode', 'paste'], 
 \           ['filename'], 
 \           ['curfunction'], 
-\           ['gitbranch'],
 \        ], 
 \        'right': [ 
 \            ['lineinfo'],

@@ -1,6 +1,11 @@
 "==========================================
 " other plugin Settings
 "==========================================
+
+" disable netw
+let loaded_netrwPlugin = 1
+
+
 " nerdcomment
 let g:NERDSpaceDelims=1
 let g:NERDAltDelims_python = 1

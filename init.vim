@@ -1,44 +1,56 @@
-call plug#begin(stdpath('data') . '/plugged')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+if &compatible
+  set nocompatible
+endif
 
-    " snippets
-    Plug 'honza/vim-snippets'
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+
+" snippets
+call minpac#add('honza/vim-snippets')
 
 
-    Plug 'liuchengxu/vim-which-key'
+call minpac#add('liuchengxu/vim-which-key')
 
-    " devicons icon
-    Plug 'ryanoasis/vim-devicons'
+" devicons icon
+call minpac#add('ryanoasis/vim-devicons')
 
-    " statusline
-    Plug 'itchyny/lightline.vim'
+" statusline
+call minpac#add('itchyny/lightline.vim')
 
-    " start view
-    Plug 'hardcoreplayers/dashboard-nvim'
+" start view
+call minpac#add('hardcoreplayers/dashboard-nvim')
 
-    " git
-    Plug 'tpope/vim-fugitive'
+" git
+call minpac#add('tpope/vim-fugitive')
 
-    Plug 'scrooloose/nerdcommenter'
+call minpac#add('scrooloose/nerdcommenter')
 
-    Plug 'itchyny/vim-cursorword'
+call minpac#add('itchyny/vim-cursorword')
 
-	Plug 'Lokaltog/vim-easymotion'
-	
-	Plug 'voldikss/vim-floaterm'
-	
-	Plug 'haya14busa/incsearch.vim'
+call minpac#add('Lokaltog/vim-easymotion')
 
-	Plug 'Yggdroot/indentLine'
+call minpac#add('voldikss/vim-floaterm')
 
-	Plug 'yianwillis/vimcdoc'
+call minpac#add('haya14busa/incsearch.vim')
 
-    " colorscheme
-    Plug 'arcticicestudio/nord-vim'
-    Plug 'kaicataldo/material.vim'
-    Plug 'altercation/vim-colors-solarized'
-	Plug 'NLKNguyen/papercolor-theme'
-call plug#end()
+call minpac#add('Yggdroot/indentLine')
+
+call minpac#add('yianwillis/vimcdoc')
+
+" colorscheme
+call minpac#add('arcticicestudio/nord-vim')
+call minpac#add('kaicataldo/material.vim')
+call minpac#add('altercation/vim-colors-solarized')
+call minpac#add('NLKNguyen/papercolor-theme')
+
+
+command! PackUpdate call minpac#update()
+command! PackStatus call minpac#status()
+command! PackClean  call minpac#clean()
+
+let loaded_netrwPlugin = 1
 
 if filereadable(expand("~/.config/nvim/basic.vim"))
     source ~/.config/nvim/basic.vim
@@ -63,4 +75,3 @@ endif
 if filereadable(expand("~/.config/nvim/others.vim"))
     source ~/.config/nvim/others.vim
 endif
-

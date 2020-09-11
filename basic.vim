@@ -87,4 +87,5 @@ set smartindent
 "==========================================
 set scrolloff=4
 
+set sessionoptions+=globals
 let g:python_host_prog  = '/Users/heikkihuang/.pyenv/shims/python'
