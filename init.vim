@@ -31,6 +31,8 @@ call minpac#add('itchyny/vim-cursorword')
 
 call minpac#add('Lokaltog/vim-easymotion')
 
+call minpac#add('junegunn/vim-easy-align')
+
 call minpac#add('voldikss/vim-floaterm')
 
 call minpac#add('haya14busa/incsearch.vim')

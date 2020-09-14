@@ -129,15 +129,19 @@ let which_key_map.c = {
             \'r': 'refactor',
 			\'c': 'comment',
 			\'i': 'import',
+			\'a': 'alias',
             \}
 " Symbol renaming.
 nmap <leader>cn <Plug>(coc-rename)
 " Formatting selected code.
-xmap <leader>cf  <plug>(coc-format)
+nmap <leader>cf <plug>(coc-format)
+vmap <leader>cf <plug>(coc-format-selected)
 nmap <leader>cr <plug>(coc-refactor)
 nmap <leader>cc <Plug>CommentaryLine
 vmap <leader>cc <Plug>Commentary
 nmap <silent> <leader>ci :coccommand editor.action.organizeimport<cr>
+xmap <leader>ca <Plug>(EasyAlign)
+nmap <leader>ca <Plug>(EasyAlign)
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
