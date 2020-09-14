@@ -13,13 +13,13 @@ let g:NERDAltDelims_python = 1
 " floaterm
 let g:floaterm_position = 'center'
 let g:floaterm_wintype = 'floating'
-" hi FloatermBorder ctermbg=Black
+hi FloatermBorder ctermbg=Black
 
 
 " indentLine
 let g:indentLine_enabled = 1
 let g:indentLine_char='┆'
-let g:indentLine_fileTypeExclude = ['coc-explorer','list','startify','tagbar','dashboard']
+let g:indentLine_fileTypeExclude = ['coc-explorer','list', 'dashboard']
 let g:indentLine_concealcursor = 'niv'
 let g:indentLine_showFirstIndentLevel = 1
 let g:dashboard_custom_header = [

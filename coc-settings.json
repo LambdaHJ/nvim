@@ -1,54 +1,66 @@
 {
-    "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "disableWorkspaceFolders": true,
-      "filetypes": ["go"]
-      }
-    },
-    "list.source.files.excludePatterns": ["**/.git/**"],
-    "diagnostic.errorSign": "✗",
-    "diagnostic.warningSign": "⚠︎",
-    "suggest.completionItemKindLabels": {
-        "keyword": "",
-        "variable": "",
-        "value": "",
-        "operator": "Ψ",
-        "function": "⨕",
-        "reference": "渚",
-        "constant": "",
-        "method": "",
-        "struct": "פּ",
-        "class": "",
-        "interface": "",
-        "text": "♣",
-        "enum": "",
-        "enumMember": "",
-        "module": "",
-        "color": "",
-        "property": "",
-        "field": "",
-        "unit": "",
-        "event": "鬒",
-        "file": "",
-        "folder": "",
-        "snippet": "",
-        "typeParameter": "", 
-        "default": ""
-    },
-    "coc.preferences.formatOnSaveFiletypes": ["go"],
-    "coc.preferences.formatOnType": true,
-    "explorer.width": 35,
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod"
+			],
+			"disableWorkspaceFolders": true,
+			"filetypes": [
+				"go"
+			]
+		}
+	},
+	"list.source.files.excludePatterns": [
+		"**/.git/**"
+	],
+	"diagnostic.errorSign": "✗",
+	"diagnostic.warningSign": "⚠︎",
+	"suggest.completionItemKindLabels": {
+		"keyword": "",
+		"variable": "",
+		"value": "",
+		"operator": "Ψ",
+		"function": "⨕",
+		"reference": "渚",
+		"constant": "",
+		"method": "",
+		"struct": "פּ",
+		"class": "",
+		"interface": "",
+		"text": "♣",
+		"enum": "",
+		"enumMember": "",
+		"module": "",
+		"color": "",
+		"property": "",
+		"field": "",
+		"unit": "",
+		"event": "鬒",
+		"file": "",
+		"folder": "",
+		"snippet": "",
+		"typeParameter": "",
+		"default": ""
+	},
+	"coc.preferences.formatOnSaveFiletypes": [
+		"go"
+	],
+	"coc.preferences.formatOnType": true,
+	"explorer.width": 35,
 	"explorer.position": "left",
-    "explorer.icon.enableNerdfont": true,
-    "explorer.file.tabCD": false,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.file.tabCD": false,
 	"explorer.previewAction.onHover": false,
-    "explorer.keyMappings": {
-        "cr": ["expanded?", "expand", "open"],
+	"explorer.keyMappings": {
+		"cr": [
+			"expanded?",
+			"expand",
+			"open"
+		],
 		"v": "open:vsplit"
-    },
+	},
 	"git.addGBlameToVirtualText": true,
 	"python.jediEnabled": false,
-    "bookmark.sign": ""
+	"bookmark.sign": ""
 }

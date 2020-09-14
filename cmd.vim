@@ -9,5 +9,3 @@ if has("autocmd")
 endif
 
 autocmd CursorHold * call CocAction("getCurrentFunctionSymbol")
-
-autocmd FileType dashboard set laststatus=0 | autocmd WinLeave <buffer> set laststatus=2

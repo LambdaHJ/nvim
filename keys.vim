@@ -133,10 +133,11 @@ let which_key_map.c = {
 " Symbol renaming.
 nmap <leader>cn <Plug>(coc-rename)
 " Formatting selected code.
-xmap <leader>cf  <Plug>(coc-format)
-nmap <leader>cr <Plug>(coc-refactor)
-nmap <leader>cc <Plug>(NERDCommenterToggle)
-nmap <silent> <leader>ci :CocCommand editor.action.organizeImport<CR>
+xmap <leader>cf  <plug>(coc-format)
+nmap <leader>cr <plug>(coc-refactor)
+nmap <leader>cc <Plug>CommentaryLine
+vmap <leader>cc <Plug>Commentary
+nmap <silent> <leader>ci :coccommand editor.action.organizeimport<cr>
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph

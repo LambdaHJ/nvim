@@ -25,7 +25,7 @@ call minpac#add('hardcoreplayers/dashboard-nvim')
 " git
 call minpac#add('tpope/vim-fugitive')
 
-call minpac#add('scrooloose/nerdcommenter')
+call minpac#add('tpope/vim-commentary')
 
 call minpac#add('itchyny/vim-cursorword')
 

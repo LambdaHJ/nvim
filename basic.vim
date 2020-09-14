@@ -8,6 +8,9 @@ let g:mapleader="\<Space>"
 
 set clipboard+=unnamedplus
 
+" auto save
+set autowrite
+
 "==========================================
 " UI view
 "==========================================
@@ -36,8 +39,8 @@ set cursorcolumn
 set cursorline
 
 " 插入模式下不突出显示当前行列, 普通模式下突出显示当前行列
-autocmd InsertEnter * :set nocursorline nocursorcolumn
-autocmd InsertLeave * :set cursorline cursorcolumn
+" autocmd InsertEnter * :set nocursorline nocursorcolumn
+" autocmd InsertLeave * :set cursorline cursorcolumn
 
 " 垂直分割在右边
 set splitright
@@ -88,4 +91,3 @@ set smartindent
 set scrolloff=4
 
 set sessionoptions+=globals
-let g:python_host_prog  = '/Users/heikkihuang/.pyenv/shims/python'
