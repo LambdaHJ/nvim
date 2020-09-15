@@ -7,5 +7,3 @@ autocmd BufEnter * nested if (winnr("$") == 1 && (&filetype == 'coc-explorer' ||
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-autocmd CursorHold * call CocAction("getCurrentFunctionSymbol")

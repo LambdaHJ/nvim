@@ -35,8 +35,6 @@ call minpac#add('junegunn/vim-easy-align')
 
 call minpac#add('voldikss/vim-floaterm')
 
-call minpac#add('haya14busa/incsearch.vim')
-
 call minpac#add('Yggdroot/indentLine')
 
 call minpac#add('yianwillis/vimcdoc')
