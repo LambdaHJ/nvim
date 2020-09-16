@@ -54,11 +54,6 @@ nnoremap _ <c-w>5<
 nnoremap <C-e> 2<C-e>
 nnoremap <C-y> 2<C-y>
 
-
-let g:coc_snippet_next = '<tab>'
-let g:coc_snippet_prev = '<S-TAB>'
-
-
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -71,6 +66,22 @@ function! s:show_documentation()
 endfunction
 
 
+
+"==========================================
+" WhichKey Key Bind
+"==========================================
+
+" command
+let which_key_map.v =  {
+	\ "name": "+vim",
+	\ "u": "package update/install",
+	\ "c": "package clean",
+	\ "r": "reload vimrc",
+  \ }
+
+nnoremap <silent> <leader>vu :call minpac#update()<cr>
+nnoremap <silent> <leader>vc :call minpac#clean()<cr>
+nnoremap <silent> <Leader>vr :source $MYVIMRC<CR>
 
 " goto command
 let which_key_map.g =  {
@@ -134,8 +145,8 @@ let which_key_map.c = {
 " Symbol renaming.
 nmap <leader>cn <Plug>(coc-rename)
 " Formatting selected code.
-nmap <leader>cf <plug>(coc-format)
-vmap <leader>cf <plug>(coc-format-selected)
+nmap <silent> <leader>cf <plug>(coc-format)
+vmap <silent> <leader>cf <plug>(coc-format-selected)
 nmap <leader>cr <plug>(coc-refactor)
 nmap <leader>cc <Plug>CommentaryLine
 vmap <leader>cc <Plug>Commentary
@@ -143,33 +154,9 @@ nmap <silent> <leader>ci :coccommand editor.action.organizeimport<cr>
 xmap <leader>ca <Plug>(EasyAlign)
 nmap <leader>ca <Plug>(EasyAlign)
 
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-" xmap <leader>a  <Plug>(coc-codeaction-selected)
-" nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current line.
-" nmap <leader>ac  <Plug>(coc-codeaction)
-
-" Introduce function text object
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-" xmap if <Plug>(coc-funcobj-i)
-" xmap af <Plug>(coc-funcobj-a)
-" omap if <Plug>(coc-funcobj-i)
-" omap af <Plug>(coc-funcobj-a)
-
-" Use <TAB> for selections ranges.
-" NOTE: Requires 'textDocument/selectionRange' support from the language server.
-" coc-tsserver, coc-python are the examples of servers that support it.
-" nmap <silent> <TAB> <Plug>(coc-range-select)
-" xmap <silent> <TAB> <Plug>(coc-range-select)
-
-
 let which_key_map.e = 'explorer'
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
-let which_key_map.r = 'reload'
-nnoremap <silent> <Leader>r :so $MYVIMRC<CR>
 
 let which_key_map.m = {
             \'name': '+bookmark',
@@ -191,10 +178,6 @@ let which_key_map.t = {
 			\'t': 'toggle',
 			\'k': 'close',
             \}
-" nnoremap <silent> <leader>tc :CocCommand floaterm.new<CR>
-" nnoremap <silent> <leader>tn :CocCommand floaterm.next<CR>
-" nnoremap <silent> <leader>tp :CocCommand floaterm.prev<CR>
-" nnoremap <silent> <leader>tt :CocCommand floaterm.toggle i<CR>
 let g:floaterm_keymap_new    = '<leader>tc'
 let g:floaterm_keymap_prev   = '<leader>tn'
 let g:floaterm_keymap_next   = '<leader>tp'

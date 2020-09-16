@@ -15,6 +15,10 @@
 		"**/.git/**"
 	],
 	"list.indicator": "",
+	"list.insertMappings": {
+		"<C-v>": "action:vsplit",
+		"<C-s>": "action:split"
+	},
 	"diagnostic.errorSign": "✗",
 	"diagnostic.warningSign": "⚠︎",
 	"suggest.completionItemKindLabels": {
@@ -48,24 +52,35 @@
 		"go"
 	],
 	"coc.preferences.formatOnType": true,
+	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"explorer.width": 35,
 	"explorer.position": "left",
 	"explorer.icon.enableNerdfont": true,
-	"explorer.file.tabCD": false,
 	"explorer.previewAction.onHover": false,
+	"explorer.keyMappingMode": "none",
 	"explorer.keyMappings": {
-		"cr": [
+		"i": "false",
+		"o": [
 			"expanded?",
-			"expand",
-			"open"
+			"collapse",
+			"expand"
 		],
-		"v": "open:vsplit"
+		"<cr>": "open",
+		"v": "open:vsplit",
+		"s": "open:split",
+		"y": "copyFilepath",
+		"Y": "copyFilename",
+		"c": "copyFile",
+		"x": "cutFile",
+		"p": "pasteFile",
+		"d": "delete",
+		"D": "deleteForever",
+		"a": "addFile",
+		"A": "addDirectory",
+		"r": "rename",
+		"R": "refresh"
 	},
 	"diagnostic.level": "warning",
-	"list.insertMappings": {
-		"<C-v>": "action:vsplit",
-		"<C-s>": "action:split"
-	},
 	"git.addGBlameToVirtualText": true,
 	"git.addedSign.hlGroup": "GitGutterAdd",
 	"git.changedSign.hlGroup": "GitGutterChange",
