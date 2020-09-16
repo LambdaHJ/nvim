@@ -67,6 +67,22 @@ endfunction
 
 
 
+"==========================================
+" WhichKey Key Bind
+"==========================================
+
+" command
+let which_key_map.v =  {
+	\ "name": "+vim",
+	\ "u": "package update/install",
+	\ "c": "package clean",
+	\ "r": "reload vimrc",
+  \ }
+
+nnoremap <silent> <leader>vu :call minpac#update()<cr>
+nnoremap <silent> <leader>vc :call minpac#clean()<cr>
+nnoremap <silent> <Leader>vr :source $MYVIMRC<CR>
+
 " goto command
 let which_key_map.g =  {
             \'name': '+goto',
@@ -141,8 +157,6 @@ nmap <leader>ca <Plug>(EasyAlign)
 let which_key_map.e = 'explorer'
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
-let which_key_map.r = 'reload'
-nnoremap <silent> <Leader>r :source $MYVIMRC<CR>
 
 let which_key_map.m = {
             \'name': '+bookmark',
