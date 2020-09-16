@@ -169,7 +169,7 @@ let which_key_map.e = 'explorer'
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
 let which_key_map.r = 'reload'
-nnoremap <silent> <Leader>r :source $MYVIMRC<CR>
+nnoremap <silent> <Leader>r :so $MYVIMRC<CR>
 
 let which_key_map.m = {
             \'name': '+bookmark',

@@ -15,6 +15,7 @@ let g:coc_global_extensions =[
     \ 'coc-clangd',
     \ 'coc-lists',
     \ 'coc-yaml',
+	\ 'coc-tasks',
     \ 'coc-gitignore',
     \ 'coc-explorer',
     \ 'coc-bookmark',

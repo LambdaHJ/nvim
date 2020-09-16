@@ -15,6 +15,10 @@ let g:floaterm_position = 'center'
 let g:floaterm_wintype = 'floating'
 hi FloatermBorder ctermbg=Black
 
+" asynctask
+let g:asyncrun_open = 6
+let g:asyncrun_rootmarks = ['.git', '.svn', '.root', 'go.mod']
+
 
 " indentLine
 let g:indentLine_enabled = 1
