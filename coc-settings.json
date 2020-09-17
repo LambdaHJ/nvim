@@ -5,7 +5,6 @@
 			"rootPatterns": [
 				"go.mod"
 			],
-			"disableWorkspaceFolders": true,
 			"filetypes": [
 				"go"
 			]
@@ -88,5 +87,6 @@
 	"git.topRemovedSign.hlGroup": "GitGutterDelete",
 	"git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
 	"python.jediEnabled": false,
-	"bookmark.sign": ""
+	"bookmark.sign": "",
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
 }

@@ -46,4 +46,3 @@ let g:dashboard_custom_section = {
     \ 'find_word'            :[' Find  word                            '.s:dashboard_shortcut['find_word']],
     \ 'book_marks'           :[' Jump to book marks                    '.s:dashboard_shortcut['book_marks']],
     \ }
-

@@ -11,13 +11,15 @@ set clipboard+=unnamedplus
 " auto save
 set autowrite
 
+set updatetime=100
+
 "==========================================
 " UI view
 "==========================================
 
 set title
 set number
-set background=light
+set background=dark
 " colorscheme solarized
 colorscheme PaperColor
 
@@ -89,5 +91,3 @@ set smartindent
 " move
 "==========================================
 set scrolloff=4
-
-set sessionoptions+=globals

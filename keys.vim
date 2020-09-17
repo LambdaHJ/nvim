@@ -2,21 +2,10 @@
 " vim which key Settings  初始化
 "==========================================
 let g:which_key_map =  {}
+autocmd VimEnter * call which_key#register('<Space>', 'g:which_key_map')
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
-"==========================================
-" Cmd Settings  自定义命令设置
-"==========================================
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "==========================================
 " HotKey Settings  自定义快捷键设置
@@ -157,6 +146,9 @@ nmap <leader>ca <Plug>(EasyAlign)
 let which_key_map.e = 'explorer'
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
+"==========================================
+" coc bookmark
+"==========================================
 
 let which_key_map.m = {
             \'name': '+bookmark',
@@ -170,6 +162,9 @@ nmap <leader>mn <Plug>(coc-bookmark-next)
 nmap <leader>mp <Plug>(coc-bookmark-prev)
 nmap <leader>ma <Plug>(coc-bookmark-annotate)
 
+"==========================================
+" terminal
+"==========================================
 let which_key_map.t = {
             \'name': '+terminal',
             \'c': 'new',
@@ -184,6 +179,10 @@ let g:floaterm_keymap_next   = '<leader>tp'
 let g:floaterm_keymap_toggle = '<leader>tt'
 let g:floaterm_keymap_kill   = '<leader>tk'
 
+"==========================================
+" diagnostics
+"==========================================
+
 let which_key_map.d = {
             \'name': '+diagnostic',
             \'n': 'next',
@@ -194,6 +193,10 @@ let which_key_map.d = {
 nmap <silent> <leader>dp <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>dn <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>df <Plug>(coc-fix-current)
+
+"==========================================
+" multi cursor
+"==========================================
 
 let which_key_map.u = {
             \'name': '+cursor',
