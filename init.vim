@@ -45,6 +45,10 @@ call minpac#add('kaicataldo/material.vim')
 call minpac#add('altercation/vim-colors-solarized')
 call minpac#add('NLKNguyen/papercolor-theme')
 
+" task
+call minpac#add('skywind3000/asynctasks.vim')
+call minpac#add('skywind3000/asyncrun.vim')
+
 
 command! PackUpdate call minpac#update()
 command! PackStatus call minpac#status()

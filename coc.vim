@@ -17,6 +17,7 @@ let g:coc_global_extensions =[
 	\ 'coc-vimlsp',
     \ 'coc-lists',
     \ 'coc-yaml',
+	\ 'coc-tasks',
     \ 'coc-gitignore',
     \ 'coc-explorer',
     \ 'coc-bookmark',
