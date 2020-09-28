@@ -20,8 +20,9 @@ set updatetime=100
 set title
 set number
 set background=dark
-" colorscheme solarized
-colorscheme PaperColor
+set termguicolors
+colorscheme nord
+" colorscheme PaperColor
 
 
 set cmdheight=2

@@ -21,6 +21,8 @@ let g:coc_global_extensions =[
     \ 'coc-gitignore',
     \ 'coc-explorer',
     \ 'coc-bookmark',
+	\ 'coc-terminal',
+	\ 'coc-marketplace'
     \]
 
 " coc 错误信息显示
