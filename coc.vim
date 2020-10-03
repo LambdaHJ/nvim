@@ -18,6 +18,7 @@ let g:coc_global_extensions =[
     \ 'coc-lists',
     \ 'coc-yaml',
 	\ 'coc-tasks',
+	\ 'coc-java',
     \ 'coc-gitignore',
     \ 'coc-explorer',
     \ 'coc-bookmark',

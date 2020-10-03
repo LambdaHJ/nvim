@@ -79,3 +79,8 @@ endif
 if filereadable(expand("~/.config/nvim/others.vim"))
     source ~/.config/nvim/others.vim
 endif
+
+" load experiment feature
+if filereadable(expand("~/.config/nvim/experiment.vim"))
+    source ~/.config/nvim/experiment.vim
+endif
