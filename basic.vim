@@ -27,6 +27,7 @@ colorscheme nord
 
 set cmdheight=2
 set laststatus=2
+set showtabline=2
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
 set relativenumber number
@@ -55,6 +56,7 @@ set noshowmode
 set noshowcmd
 set noruler
 set shortmess+=cc
+set shortmess+=F
 "==========================================
 " backup && history
 "==========================================

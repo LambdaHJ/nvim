@@ -17,3 +17,5 @@ autocmd BufEnter * nested if (winnr("$") == 1 && (&filetype == 'coc-explorer' ||
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()

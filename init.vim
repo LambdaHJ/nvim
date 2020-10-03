@@ -18,6 +18,7 @@ call minpac#add('ryanoasis/vim-devicons')
 
 " statusline
 call minpac#add('itchyny/lightline.vim')
+call minpac#add('mengelbrecht/lightline-bufferline')
 
 " start view
 call minpac#add('hardcoreplayers/dashboard-nvim')

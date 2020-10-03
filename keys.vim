@@ -208,3 +208,24 @@ nmap <silent> <leader>uc <Plug>(coc-cursors-position)
 nmap <silent> <leader>ud <Plug>(coc-cursors-word)
 xmap <silent> <leader>ud <Plug>(coc-cursors-range)
 nmap <silent> <leader>ux  <Plug>(coc-cursors-operator)
+
+
+"==========================================
+" buffer
+"==========================================
+
+let which_key_map.b = {
+	\ 'name': '+buffer',
+	\ '1': "buffer 1",
+	\ '2': "buffer 2",
+	\ '3': "buffer 3",
+	\ '4': "buffer 4",
+	\ '5': "buffer 5",
+	\ 'd': "delet"
+  \ }
+nmap <Leader>b1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>b2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>b3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>b4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>b5 <Plug>lightline#bufferline#go(5)
+nnorema <silent> <leader>bd :bdelete<cr>

@@ -17,3 +17,7 @@ endfunction
 function! CloseTerm()
 	call nvim_win_close(g:termwin, v:true)
 endfunction
+
+function! CloseBuffer()
+	call lightline#bufferline#delete(bufnr("%"))
+endfunction
