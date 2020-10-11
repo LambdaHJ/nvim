@@ -18,5 +18,7 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-autocmd FileType go let b:coc_pairs_disabled = ['<'] | let b:coc_root_patterns = ['.git', 'go.mod']
+autocmd FileType go,vim let b:coc_pairs_disabled = ['<'] | let b:coc_root_patterns = ['.git', 'go.mod']
 
+" 当文件类型是dashboard时，自动隐藏 tabline
+autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
