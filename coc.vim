@@ -3,7 +3,7 @@
 "==========================================
 
 " coc 扩展
-let g:coc_global_extensions =[
+let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-pairs',
     \ 'coc-json',
@@ -18,11 +18,11 @@ let g:coc_global_extensions =[
     \ 'coc-lists',
     \ 'coc-yaml',
 	\ 'coc-tasks',
-	\ 'coc-java',
+	\ 'coc-go',
+	\ 'coc-tasks',
     \ 'coc-gitignore',
     \ 'coc-explorer',
     \ 'coc-bookmark',
-	\ 'coc-terminal',
 	\ 'coc-marketplace'
     \]
 

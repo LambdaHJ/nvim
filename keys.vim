@@ -6,6 +6,8 @@ autocmd VimEnter * call which_key#register('<Space>', 'g:which_key_map')
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
+" terminal model use esc.
+tnoremap <Esc> <C-\><C-n>
 
 "==========================================
 " HotKey Settings  自定义快捷键设置
@@ -167,13 +169,14 @@ nmap <leader>ma <Plug>(coc-bookmark-annotate)
 "==========================================
 let which_key_map.t = {
             \'name': '+terminal',
-            \'c': 'new',
+            \'s': 'split',
             \'n': 'next',
             \'p': 'preview',
 			\'t': 'toggle',
 			\'k': 'close',
             \}
-let g:floaterm_keymap_new    = '<leader>tc'
+nnoremap <leader>ts <cmd>FloatermNew --wintype=normal<CR>
+" let g:floaterm_keymap_new    = '<leader>tc'
 let g:floaterm_keymap_prev   = '<leader>tn'
 let g:floaterm_keymap_next   = '<leader>tp'
 let g:floaterm_keymap_toggle = '<leader>tt'
@@ -221,11 +224,15 @@ let which_key_map.b = {
 	\ '3': "buffer 3",
 	\ '4': "buffer 4",
 	\ '5': "buffer 5",
-	\ 'd': "delet"
+	\ '[': "prev buffer",
+	\ ']': "next buffer",
+	\ 'd': "delete"
   \ }
 nmap <Leader>b1 <Plug>lightline#bufferline#go(1)
 nmap <Leader>b2 <Plug>lightline#bufferline#go(2)
 nmap <Leader>b3 <Plug>lightline#bufferline#go(3)
 nmap <Leader>b4 <Plug>lightline#bufferline#go(4)
 nmap <Leader>b5 <Plug>lightline#bufferline#go(5)
-nnorema <silent> <leader>bd :bdelete<cr>
+nnorema <silent> <leader>b[ <cmd>bprev<cr>
+nnorema <silent> <leader>b] <cmd>bnext<cr>
+nnorema <silent> <leader>bd <cmd>bd<cr>

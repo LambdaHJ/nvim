@@ -11,7 +11,8 @@ set clipboard+=unnamedplus
 " auto save
 set autowrite
 
-set updatetime=100
+set inccommand=split
+set updatetime=1000
 
 "==========================================
 " UI view
@@ -20,8 +21,13 @@ set updatetime=100
 set title
 set number
 set background=dark
-set termguicolors
-colorscheme nord
+if $COLORTERM
+	set termguicolors
+endif
+" colorscheme nord
+let g:gruvbox_italic=1
+colorscheme gruvbox
+
 " colorscheme PaperColor
 
 

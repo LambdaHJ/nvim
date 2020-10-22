@@ -19,3 +19,9 @@ if has("autocmd")
 endif
 
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+
+function s:floatermSettings()
+    setlocal nonumber norelativenumber
+endfunction
+
+autocmd FileType floaterm call s:floatermSettings()

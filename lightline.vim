@@ -1,5 +1,5 @@
 let g:lightline = { 
-\    'colorscheme': 'nord', 
+\    'colorscheme': 'gruvbox', 
 \    'active': { 
 \        'left': [ 
 \           ['mode', 'paste'], 
@@ -14,8 +14,8 @@ let g:lightline = {
 \        ]
 \    },
 \    'inactive': {
-\        'left': [['mode']],
-\        'right': [],
+\        'left': [['mode'], ['filename']],
+\        'right': [['lineinfo'], ['fileencoding'],],
 \    },
 \    'tabline': {
 \        'left': [['buffers']],
@@ -55,14 +55,16 @@ let g:lightline#bufferline#unicode_symbols = 1
 let g:lightline#bufferline#number_map = {
 \ 0: '➓ ', 1: '❶ ', 2: '❷ ', 3: '❸ ', 4: '❹ ',
 \ 5: '❺ ', 6: '❻ ', 7: '❼ ', 8: '❽ ', 9: '❾ '}
-let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': 'List', 'dashboard': ''}
+
+
+let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': '', 'dashboard': ''}
 
 function! LightlineModeOrPlugin()
 	return !has_key(s:panel_ignore, &ft) ? lightline#mode() : get(s:panel_ignore, &ft, '')
 endfunction
 
 function! LightlineGitBranch()
-	return !has_key(s:panel_ignore, &ft) ? FugitiveHead() : ''
+	return !has_key(s:panel_ignore, &ft) ? ' '.gitbranch#name() : ''
 endfunction
 
 function! LightlineReadonly()

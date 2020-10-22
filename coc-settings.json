@@ -1,15 +1,4 @@
 {
-	"languageserver": {
-		"golang": {
-			"command": "gopls",
-			"rootPatterns": [
-				"go.mod"
-			],
-			"filetypes": [
-				"go"
-			]
-		}
-	},
 	"list.source.files.excludePatterns": [
 		"**/.git/**"
 	],
@@ -57,6 +46,12 @@
 	"explorer.icon.enableNerdfont": true,
 	"explorer.previewAction.onHover": false,
 	"explorer.keyMappingMode": "none",
+	"explorer.file.column.git.icon.modified": "✹",
+	"explorer.file.column.git.icon.added": "✚",
+	"explorer.file.column.git.icon.deleted": "✖",
+	"explorer.file.column.git.icon.renamed": "➜",
+	"explorer.file.column.git.icon.untracked": "?",
+	"explorer.file.column.git.icon.unmerged": "═",
 	"explorer.keyMappings": {
 		"i": "false",
 		"o": [
@@ -81,12 +76,8 @@
 	},
 	"diagnostic.level": "warning",
 	"git.addGBlameToVirtualText": true,
-	"git.addedSign.hlGroup": "GitGutterAdd",
-	"git.changedSign.hlGroup": "GitGutterChange",
-	"git.removedSign.hlGroup": "GitGutterDelete",
-	"git.topRemovedSign.hlGroup": "GitGutterDelete",
-	"git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
 	"python.jediEnabled": false,
 	"bookmark.sign": "",
-	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+  "coc.preferences.extensionUpdateCheck": "daily"
 }

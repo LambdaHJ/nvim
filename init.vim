@@ -20,15 +20,16 @@ call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('mengelbrecht/lightline-bufferline')
 
+call minpac#add('itchyny/vim-gitbranch')
+
 " start view
 call minpac#add('hardcoreplayers/dashboard-nvim')
-
-" git
-call minpac#add('tpope/vim-fugitive')
 
 call minpac#add('tpope/vim-commentary')
 
 call minpac#add('itchyny/vim-cursorword')
+
+call minpac#add('tpope/vim-surround')
 
 call minpac#add('Lokaltog/vim-easymotion')
 
@@ -36,15 +37,21 @@ call minpac#add('junegunn/vim-easy-align')
 
 call minpac#add('voldikss/vim-floaterm')
 
+" markdown preview
+call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
+
 call minpac#add('Yggdroot/indentLine')
 
 call minpac#add('yianwillis/vimcdoc')
+
+call minpac#add('skywind3000/asyncrun.vim')
 
 " colorscheme
 call minpac#add('arcticicestudio/nord-vim')
 call minpac#add('kaicataldo/material.vim')
 call minpac#add('altercation/vim-colors-solarized')
 call minpac#add('NLKNguyen/papercolor-theme')
+call minpac#add('morhetz/gruvbox')
 
 " task
 call minpac#add('skywind3000/asynctasks.vim')
@@ -84,4 +91,8 @@ endif
 " load experiment feature
 if filereadable(expand("~/.config/nvim/experiment.vim"))
     source ~/.config/nvim/experiment.vim
+endif
+
+if filereadable(expand("~/.config/nvim/functions.vim"))
+    source ~/.config/nvim/functions.vim
 endif
