@@ -20,7 +20,7 @@ call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('mengelbrecht/lightline-bufferline')
 
-call minpac#add('itchyny/vim-gitbranch')
+call minpac#add('tpope/vim-fugitive')
 
 " start view
 call minpac#add('hardcoreplayers/dashboard-nvim')

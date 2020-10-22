@@ -78,6 +78,11 @@
 	"git.addGBlameToVirtualText": true,
 	"python.jediEnabled": false,
 	"bookmark.sign": "",
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
-  "coc.preferences.extensionUpdateCheck": "daily"
+	"git.addedSign.hlGroup": "GitGutterAdd",
+	"git.changedSign.hlGroup": "GitGutterChange",
+	"git.removedSign.hlGroup": "GitGutterDelete",
+	"git.topRemovedSign.hlGroup": "GitGutterDelete",
+	"git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
+	"coc.preferences.extensionUpdateCheck": "daily"
 }

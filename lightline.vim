@@ -64,7 +64,7 @@ function! LightlineModeOrPlugin()
 endfunction
 
 function! LightlineGitBranch()
-	return !has_key(s:panel_ignore, &ft) ? ' '.gitbranch#name() : ''
+	return !has_key(s:panel_ignore, &ft) ? ' '.FugitiveStatusline() : ''
 endfunction
 
 function! LightlineReadonly()
