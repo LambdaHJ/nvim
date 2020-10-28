@@ -5,7 +5,6 @@ let g:lightline = {
 \           ['mode', 'paste'], 
 \           ['filename'], 
 \           ['curfunction'], 
-\           ['gitstatus'],
 \        ], 
 \        'right': [ 
 \            ['lineinfo'],
@@ -19,7 +18,7 @@ let g:lightline = {
 \    },
 \    'tabline': {
 \        'left': [['buffers']],
-\        'right': [['gitbranch']],
+\        'right': [['gitstatus', 'gitbranch'], ['cocstatus']],
 \   },
 \    'component_function': {
 \        'mode': 'LightlineModeOrPlugin',
@@ -29,17 +28,19 @@ let g:lightline = {
 \        'lineinfo': 'LightlineLineinfo',
 \        'cocstatus': 'coc#status',
 \        'curfunction': 'LightlineFunction',
-\        'gitstatus': 'LightlineGitStatus',
 \    },
 \    'component_expand': {
 \        'diagnostic': 'LightlineDiagnostic',
 \        'buffers': 'lightline#bufferline#buffers',
 \        'gitbranch': 'LightlineGitBranch',
+\        'gitstatus': 'LightlineGitStatus',
 \	 },
 \    'component_type': {
 \        'diagnostic': 'error',
 \        'buffers': 'tabsel',
 \        'gitbranch': 'tabsel',
+\        'gitstatus': 'tabsel',
+\        'cocstatus': 'tabsel',
 \    },
 \    'component_raw': {'buffers': 1},
 \    'separator': { 'left': '', 'right': '' },
@@ -64,7 +65,8 @@ function! LightlineModeOrPlugin()
 endfunction
 
 function! LightlineGitBranch()
-	return !has_key(s:panel_ignore, &ft) ? ' '.FugitiveStatusline() : ''
+	let gstatus = FugitiveHead()
+	return !has_key(s:panel_ignore, &ft) || gstatus ? ' '.gstatus : ''
 endfunction
 
 function! LightlineReadonly()

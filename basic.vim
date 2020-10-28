@@ -37,11 +37,11 @@ set showtabline=2
 
 " 相对行号: 行号变成相对，可以用 nj/nk 进行跳转
 set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
+" au FocusLost * if ($filetype != 'floaterm') | :set norelativenumber number | endif
+" au FocusGained * if ($filetype != 'floaterm') | :set relativenumber | endif
 " 插入模式下用绝对行号, 普通模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * if ($filetype != 'floaterm') | :set norelativenumber number | endif
+autocmd InsertLeave * if ($filetype != 'floaterm') | :set relativenumber | endif
 
 " 突出显示当前列
 set cursorcolumn

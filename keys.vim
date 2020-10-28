@@ -99,7 +99,7 @@ let which_key_map.l = {
 			\'r': 'rencent',
             \}
 " Find symbol of current document.
-nnoremap <silent> <leader>lo  :<C-u>CocList --auto-preview outline<cr>
+nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
 " Find fils of current project.
 nnoremap <silent> <leader>lf  :<C-u>CocList files<cr>
 " Search workspace.

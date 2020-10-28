@@ -25,7 +25,7 @@ let g:indentLine_fileTypeExclude = ['coc-explorer','list', 'dashboard']
 let g:indentLine_concealcursor = 'niv'
 let g:indentLine_showFirstIndentLevel = 1
 
-
+let g:dashboard_custom_footer = ['Keep It Simple, Stupid']
 let g:dashboard_custom_header = [
     \'      _   _         ____  _ _                  ____        _ _      _    ',
     \'     | \ | | ___   / ___|(_) |_   _____ _ __  | __ ) _   _| | | ___| |_  ',
@@ -51,3 +51,6 @@ let g:dashboard_custom_section = {
     \ 'find_word'            :{'description':[' Find  word                            '.s:dashboard_shortcut['find_word']], 'command': ''},
     \ 'book_marks'           :{'description':[' Jump to book marks                    '.s:dashboard_shortcut['book_marks']], 'command': ''},
     \ }
+
+
+let g:mkdp_auto_start = 1
