@@ -42,6 +42,7 @@
 	"coc.preferences.formatOnType": true,
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"explorer.width": 35,
+	"explorer.quitOnOpen": true,
 	"explorer.position": "left",
 	"explorer.icon.enableNerdfont": true,
 	"explorer.previewAction.onHover": false,
@@ -52,7 +53,7 @@
 	"explorer.file.column.git.icon.renamed": "➜",
 	"explorer.file.column.git.icon.untracked": "?",
 	"explorer.file.column.git.icon.unmerged": "═",
-	"explorer.keyMappings": {
+	"explorer.keyMappings.global": {
 		"i": "false",
 		"o": [
 			"expanded?",
@@ -75,6 +76,7 @@
 		"R": "refresh"
 	},
 	"diagnostic.level": "warning",
+	"diagnostic.refreshAfterSave": true,
 	"git.addGBlameToVirtualText": true,
 	"python.jediEnabled": false,
 	"bookmark.sign": "",

@@ -9,6 +9,7 @@ let g:lightline = {
 \        'right': [ 
 \            ['lineinfo'],
 \            ['fileencoding'],
+\            ['battery'],
 \            ['diagnostic'],
 \        ]
 \    },
@@ -18,7 +19,7 @@ let g:lightline = {
 \    },
 \    'tabline': {
 \        'left': [['buffers']],
-\        'right': [['gitstatus', 'gitbranch'], ['cocstatus']],
+\        'right': [['gitbranch', 'gitstatus'], ['cocstatus']],
 \   },
 \    'component_function': {
 \        'mode': 'LightlineModeOrPlugin',
@@ -39,7 +40,7 @@ let g:lightline = {
 \        'diagnostic': 'error',
 \        'buffers': 'tabsel',
 \        'gitbranch': 'tabsel',
-\        'gitstatus': 'tabsel',
+\        'gitstatus': 'raw',
 \        'cocstatus': 'tabsel',
 \    },
 \    'component_raw': {'buffers': 1},
@@ -58,7 +59,7 @@ let g:lightline#bufferline#number_map = {
 \ 5: '❺ ', 6: '❻ ', 7: '❼ ', 8: '❽ ', 9: '❾ '}
 
 
-let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': '', 'dashboard': ''}
+let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': '', 'dashboard': '', 'packager': 'Packager'}
 
 function! LightlineModeOrPlugin()
 	return !has_key(s:panel_ignore, &ft) ? lightline#mode() : get(s:panel_ignore, &ft, '')
@@ -69,24 +70,13 @@ function! LightlineGitBranch()
 	return !has_key(s:panel_ignore, &ft) || gstatus ? ' '.gstatus : ''
 endfunction
 
-function! LightlineReadonly()
-	return &readonly ? '' : ''
-endfunction
-
 function! LightlineFunction()
   return get(b:, 'coc_current_function', '')
 endfunction
 
-function! LightlineModified()
-	return &ft ==# 'help' ? '' : &modified ? '' : &modifiable ? '' : ''
-endfunction
-
 function! LightlineFilename()
 	let fname = expand('%:t')
-	return !has_key(s:panel_ignore, &ft) ?
-		\ (LightlineReadonly() !=# '' ? ' ' . LightlineReadonly() . ' ' : '') .
-		\ (fname !=# '' ? fname . ' '.WebDevIconsGetFileTypeSymbol().' ' : '[No Name]') .
-		\ (LightlineModified() !=# '' ? ' ' . LightlineModified() : '') : ''
+	return !has_key(s:panel_ignore, &ft) ? (fname !=# '' ? fname . ' '.WebDevIconsGetFileTypeSymbol().' ' : '[No Name]')  : ''
 endfunction  
 
 function! LightLineFilepath()
@@ -112,10 +102,10 @@ function! LightlineDiagnostic() abort
   if empty(info) | return '' | endif
   let msgs = []
   if get(info, 'error', 0)
-    call add(msgs, '✗' . info['error'])
+    call add(msgs, g:coc_status_error_sign . info['error'])
   endif
   if get(info, 'warning', 0)
-    call add(msgs, '⚠︎' . info['warning'])
+    call add(msgs, 'coc_status_warning_sign' . info['warning'])
   endif
   return join(msgs, ' ')
 endfunction

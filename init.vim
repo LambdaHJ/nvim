@@ -2,67 +2,71 @@ if &compatible
   set nocompatible
 endif
 
-packadd minpac
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+function! PackagerInit() abort
+	packadd vim-packager
+	call packager#init()
+	call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
 
-" snippets
-call minpac#add('honza/vim-snippets')
+	call packager#add('neoclide/coc.nvim', {'branch': 'release'})
 
-
-call minpac#add('liuchengxu/vim-which-key')
-
-" devicons icon
-call minpac#add('ryanoasis/vim-devicons')
-
-" statusline
-call minpac#add('itchyny/lightline.vim')
-call minpac#add('mengelbrecht/lightline-bufferline')
-
-call minpac#add('tpope/vim-fugitive')
-
-" start view
-call minpac#add('hardcoreplayers/dashboard-nvim')
-
-call minpac#add('tpope/vim-commentary')
-
-call minpac#add('itchyny/vim-cursorword')
-
-call minpac#add('tpope/vim-surround')
-
-call minpac#add('Lokaltog/vim-easymotion')
-
-call minpac#add('junegunn/vim-easy-align')
-
-call minpac#add('voldikss/vim-floaterm')
-
-" markdown preview
-call minpac#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
-
-call minpac#add('Yggdroot/indentLine')
-
-call minpac#add('yianwillis/vimcdoc')
-
-call minpac#add('skywind3000/asyncrun.vim')
-
-" colorscheme
-call minpac#add('arcticicestudio/nord-vim')
-call minpac#add('kaicataldo/material.vim')
-call minpac#add('altercation/vim-colors-solarized')
-call minpac#add('NLKNguyen/papercolor-theme')
-call minpac#add('morhetz/gruvbox')
-
-" task
-call minpac#add('skywind3000/asynctasks.vim')
-call minpac#add('skywind3000/asyncrun.vim')
+	" snippets
+	call packager#add('honza/vim-snippets')
 
 
-command! PackUpdate call minpac#update()
-command! PackStatus call minpac#status()
-command! PackClean  call minpac#clean()
+	call packager#add('liuchengxu/vim-which-key')
 
-let loaded_netrwPlugin = 1
+	" devicons icon
+	call packager#add('ryanoasis/vim-devicons')
+
+	" statusline
+	call packager#add('itchyny/lightline.vim')
+	call packager#add('mengelbrecht/lightline-bufferline')
+	" call packager#add('lambdalisue/battery.vim')
+
+	call packager#add('tpope/vim-fugitive')
+
+	" start view
+	call packager#add('hardcoreplayers/dashboard-nvim')
+
+	call packager#add('tpope/vim-commentary')
+
+	call packager#add('itchyny/vim-cursorword')
+
+	call packager#add('tpope/vim-surround')
+
+	call packager#add('Lokaltog/vim-easymotion')
+
+	call packager#add('junegunn/vim-easy-align')
+
+	call packager#add('voldikss/vim-floaterm')
+
+	" markdown preview
+	call packager#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
+
+	call packager#add('Yggdroot/indentLine')
+
+	call packager#add('yianwillis/vimcdoc')
+
+	call packager#add('skywind3000/asyncrun.vim')
+
+	" colorscheme
+	call packager#add('arcticicestudio/nord-vim')
+	call packager#add('kaicataldo/material.vim')
+	call packager#add('altercation/vim-colors-solarized')
+	call packager#add('NLKNguyen/papercolor-theme')
+	call packager#add('morhetz/gruvbox')
+
+	" task
+	call packager#add('skywind3000/asynctasks.vim')
+	call packager#add('skywind3000/asyncrun.vim')
+endfunction
+
+
+command! PackInstall call PackagerInit() | call packager#install()
+command! PackUpdate call PackagerInit() | call packager#update()
+command! PackStatus call PackagerInit() | call packager#status()
+command! PackClean  call PackagerInit() | call packager#clean()
+
 
 if filereadable(expand("~/.config/nvim/basic.vim"))
     source ~/.config/nvim/basic.vim

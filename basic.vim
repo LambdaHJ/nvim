@@ -2,7 +2,7 @@
 " global config
 "==========================================
 set guicursor=
-set mouse=nv
+set mouse=a
 syntax on
 let g:mapleader="\<Space>"
 
@@ -41,7 +41,7 @@ set relativenumber number
 " au FocusGained * if ($filetype != 'floaterm') | :set relativenumber | endif
 " 插入模式下用绝对行号, 普通模式下用相对
 autocmd InsertEnter * if ($filetype != 'floaterm') | :set norelativenumber number | endif
-autocmd InsertLeave * if ($filetype != 'floaterm') | :set relativenumber | endif
+" autocmd InsertLeave * if ($filetype != 'floaterm') | :set relativenumber | endif
 
 " 突出显示当前列
 set cursorcolumn

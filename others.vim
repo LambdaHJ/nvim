@@ -5,10 +5,6 @@
 " disable netw
 let loaded_netrwPlugin = 1
 
-" nerdcomment
-let g:NERDSpaceDelims=1
-let g:NERDAltDelims_python = 1
-
 " floaterm
 let g:floaterm_position = 'center'
 let g:floaterm_title = "Terminal"
@@ -52,5 +48,6 @@ let g:dashboard_custom_section = {
     \ 'book_marks'           :{'description':[' Jump to book marks                    '.s:dashboard_shortcut['book_marks']], 'command': ''},
     \ }
 
+let g:battery#update_statusline = 1
 
 let g:mkdp_auto_start = 1

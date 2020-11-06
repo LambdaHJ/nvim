@@ -65,13 +65,17 @@ endfunction
 " command
 let which_key_map.v =  {
 	\ "name": "+vim",
-	\ "u": "package update/install",
+    \ "i": "package install",
+	\ "u": "package update",
 	\ "c": "package clean",
+	\ "s": "package status",
 	\ "r": "reload vimrc",
   \ }
 
-nnoremap <silent> <leader>vu :call minpac#update()<cr>
-nnoremap <silent> <leader>vc :call minpac#clean()<cr>
+nnoremap <silent> <leader>vi <cmd>PackInstall<cr>
+nnoremap <silent> <leader>vu <cmd>PackUpdate<cr>
+nnoremap <silent> <leader>vc <cmd>PackClean<cr>
+nnoremap <silent> <leader>vs <cmd>PackStatue<cr>
 nnoremap <silent> <Leader>vr :source $MYVIMRC<CR>
 
 " goto command
@@ -141,7 +145,7 @@ vmap <silent> <leader>cf <plug>(coc-format-selected)
 nmap <leader>cr <plug>(coc-refactor)
 nmap <leader>cc <Plug>CommentaryLine
 vmap <leader>cc <Plug>Commentary
-nmap <silent> <leader>ci :coccommand editor.action.organizeimport<cr>
+nmap <silent> <leader>ci <cmd>CocCommand editor.action.organizeImport<cr>
 xmap <leader>ca <Plug>(EasyAlign)
 nmap <leader>ca <Plug>(EasyAlign)
 
