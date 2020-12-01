@@ -65,7 +65,7 @@ endfunction
 " command
 let which_key_map.v =  {
 	\ "name": "+vim",
-    \ "i": "package install",
+        \ "i": "package install",
 	\ "u": "package update",
 	\ "c": "package clean",
 	\ "s": "package status",
@@ -98,9 +98,9 @@ let which_key_map.l = {
             \'o': 'outline',
             \'g': 'grep project',
             \'w': 'word in current buffer',
-			\'p': 'project',
-			\'m': 'bookmark',
-			\'r': 'rencent',
+            \'p': 'project',
+            \'m': 'bookmark',
+            \'r': 'rencent',
             \}
 " Find symbol of current document.
 nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
@@ -124,6 +124,19 @@ function! s:GrepArgs(...)
   return join(list, "\n")
 endfunction
 
+
+"==========================================
+" window
+"==========================================
+
+let which_key_map.w = {
+  \ 'name': "+window",
+  \ 'e': 'explore',
+  \ 'v': 'vista',
+  \ }
+nnoremap <silent> <leader>we :CocCommand explorer<CR>
+nnoremap <silent> <leader>wv <cmd>Vista!!<CR>
+
 "==========================================
 " code
 "==========================================
@@ -133,9 +146,9 @@ let which_key_map.c = {
             \'n': 'rename',
             \'f': 'format',
             \'r': 'refactor',
-			\'c': 'comment',
-			\'i': 'import',
-			\'a': 'alias',
+	    \'c': 'comment',
+	    \'i': 'import',
+	    \'a': 'alias',
             \}
 " Symbol renaming.
 nmap <leader>cn <Plug>(coc-rename)
@@ -149,9 +162,6 @@ nmap <silent> <leader>ci <cmd>CocCommand editor.action.organizeImport<cr>
 xmap <leader>ca <Plug>(EasyAlign)
 nmap <leader>ca <Plug>(EasyAlign)
 
-let which_key_map.e = 'explorer'
-nnoremap <silent> <leader>e :CocCommand explorer<CR>
-
 "==========================================
 " coc bookmark
 "==========================================
@@ -161,7 +171,7 @@ let which_key_map.m = {
             \'t': 'create/delete bookmark',
             \'n': 'next',
             \'p': 'preview',
-			\'a': 'annotate',
+            \'a': 'annotate',
             \}
 nmap <leader>mt <Plug>(coc-bookmark-toggle)
 nmap <leader>mn <Plug>(coc-bookmark-next)
@@ -176,8 +186,8 @@ let which_key_map.t = {
             \'s': 'split',
             \'n': 'next',
             \'p': 'preview',
-			\'t': 'toggle',
-			\'k': 'close',
+            \'t': 'toggle',
+            \'k': 'close',
             \}
 nnoremap <leader>ts <cmd>FloatermNew --wintype=normal<CR>
 " let g:floaterm_keymap_new    = '<leader>tc'
@@ -194,7 +204,7 @@ let which_key_map.d = {
             \'name': '+diagnostic',
             \'n': 'next',
             \'p': 'prev',
-			\'f': 'fix',
+            \'f': 'fix',
             \}
 " navigate diagnostics
 nmap <silent> <leader>dp <Plug>(coc-diagnostic-prev)
@@ -209,7 +219,7 @@ let which_key_map.u = {
             \'name': '+cursor',
             \'c': 'position',
             \'d': 'range/word',
-			\'x': 'operator',
+            \'x': 'operator',
             \}
 nmap <silent> <leader>uc <Plug>(coc-cursors-position)
 nmap <silent> <leader>ud <Plug>(coc-cursors-word)
@@ -228,6 +238,10 @@ let which_key_map.b = {
 	\ '3': "buffer 3",
 	\ '4': "buffer 4",
 	\ '5': "buffer 5",
+	\ '6': "buffer 6",
+	\ '7': "buffer 7",
+	\ '8': "buffer 8",
+	\ '9': "buffer 9",
 	\ '[': "prev buffer",
 	\ ']': "next buffer",
 	\ 'd': "delete"
@@ -237,6 +251,23 @@ nmap <Leader>b2 <Plug>lightline#bufferline#go(2)
 nmap <Leader>b3 <Plug>lightline#bufferline#go(3)
 nmap <Leader>b4 <Plug>lightline#bufferline#go(4)
 nmap <Leader>b5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>b6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>b7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>b8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>b9 <Plug>lightline#bufferline#go(9)
 nnorema <silent> <leader>b[ <cmd>bprev<cr>
 nnorema <silent> <leader>b] <cmd>bnext<cr>
 nnorema <silent> <leader>bd <cmd>bd<cr>
+
+"==========================================
+" asynctask
+"==========================================
+let which_key_map.r = {
+  \ 'name': '+task',
+  \ 'e': 'edit',
+  \ 'l': 'list',
+  \ }
+
+nnoremap <silent> <leader>re <cmd>AsyncTaskEdit<cr>
+nnoremap <silent> <leader>rl <cmd>CocList tasks<cr>
+

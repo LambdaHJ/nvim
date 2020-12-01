@@ -1,5 +1,5 @@
 let g:lightline = { 
-\    'colorscheme': 'gruvbox', 
+\    'colorscheme': 'nord', 
 \    'active': { 
 \        'left': [ 
 \           ['mode', 'paste'], 
@@ -59,7 +59,7 @@ let g:lightline#bufferline#number_map = {
 \ 5: '❺ ', 6: '❻ ', 7: '❼ ', 8: '❽ ', 9: '❾ '}
 
 
-let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': '', 'dashboard': '', 'packager': 'Packager'}
+let s:panel_ignore = {'coc-explorer': 'Explorer', 'list': '', 'dashboard': '', 'packager': 'Packager', 'vista': 'Vista'}
 
 function! LightlineModeOrPlugin()
 	return !has_key(s:panel_ignore, &ft) ? lightline#mode() : get(s:panel_ignore, &ft, '')

@@ -17,7 +17,7 @@ let g:asyncrun_rootmarks = ['.git', '.svn', '.root', 'go.mod']
 " indentLine
 let g:indentLine_enabled = 1
 let g:indentLine_char='┆'
-let g:indentLine_fileTypeExclude = ['coc-explorer','list', 'dashboard']
+let g:indentLine_fileTypeExclude = ['coc-explorer','list', 'dashboard', 'vista']
 let g:indentLine_concealcursor = 'niv'
 let g:indentLine_showFirstIndentLevel = 1
 
@@ -48,6 +48,11 @@ let g:dashboard_custom_section = {
     \ 'book_marks'           :{'description':[' Jump to book marks                    '.s:dashboard_shortcut['book_marks']], 'command': ''},
     \ }
 
-let g:battery#update_statusline = 1
+let g:vista_default_executive = 'coc'
+let g:vista#renderer#enable_icon = 1
 
 let g:mkdp_auto_start = 1
+
+
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)

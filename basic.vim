@@ -21,12 +21,10 @@ set updatetime=1000
 set title
 set number
 set background=dark
-if $COLORTERM
-	set termguicolors
-endif
-" colorscheme nord
-let g:gruvbox_italic=1
-colorscheme gruvbox
+set termguicolors
+colorscheme nord
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
 
 " colorscheme PaperColor
 

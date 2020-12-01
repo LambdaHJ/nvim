@@ -22,11 +22,19 @@ function! PackagerInit() abort
 	call packager#add('itchyny/lightline.vim')
 	call packager#add('mengelbrecht/lightline-bufferline')
 	" call packager#add('lambdalisue/battery.vim')
+	
+	call packager#add('liuchengxu/vista.vim')
 
 	call packager#add('tpope/vim-fugitive')
 
+	call packager#add('psliwka/vim-smoothie')
+	call packager#add('rhysd/accelerated-jk')
+
 	" start view
 	call packager#add('hardcoreplayers/dashboard-nvim')
+
+	" automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+	call packager#add("tpope/vim-sleuth")
 
 	call packager#add('tpope/vim-commentary')
 
