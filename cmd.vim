@@ -10,6 +10,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " 最后窗口时自动关闭 TODO(和删除buffer冲突)
 " autocmd BufEnter * nested if (winnr("$") == 1 && (&filetype == 'coc-explorer' || &filetype == 'list' || &filetype == 'packager')) | q | endif
 
@@ -25,3 +26,6 @@ function s:floatermSettings()
 endfunction
 
 autocmd FileType floaterm call s:floatermSettings()
+
+" Golang auto import on save.
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
