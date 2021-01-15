@@ -41,6 +41,7 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " 使用 <CR> 确认补全，并触发 coc.nvim 的 formatOnType 功能
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()

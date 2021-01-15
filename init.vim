@@ -67,6 +67,9 @@ function! PackagerInit() abort
 	" task
 	call packager#add('skywind3000/asynctasks.vim')
 	call packager#add('skywind3000/asyncrun.vim')
+
+	
+	call packager#add('google/vim-jsonnet')
 endfunction
 
 
