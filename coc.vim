@@ -11,19 +11,18 @@ let g:coc_global_extensions = [
     \ 'coc-emoji',
     \ 'coc-project',
     \ 'coc-python',
-	\ 'coc-rls',
+    \ 'coc-rls',
     \ 'coc-clangd',
-	\ 'coc-tsserver',
-	\ 'coc-vimlsp',
+    \ 'coc-tsserver',
+    \ 'coc-vimlsp',
     \ 'coc-lists',
     \ 'coc-yaml',
-	\ 'coc-tasks',
-	\ 'coc-go',
-	\ 'coc-tasks',
+    \ 'coc-tasks',
+    \ 'coc-go',
+    \ 'coc-tasks',
     \ 'coc-gitignore',
     \ 'coc-explorer',
-    \ 'coc-bookmark',
-	\ 'coc-marketplace'
+    \ 'coc-marketplace'
     \]
 
 " coc 错误信息显示

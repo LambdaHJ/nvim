@@ -75,10 +75,8 @@
 		"R": "refresh"
 	},
 	"diagnostic.level": "warning",
-	"diagnostic.refreshAfterSave": true,
 	"git.addGBlameToVirtualText": true,
 	"python.jediEnabled": false,
-	"bookmark.sign": "",
 	"git.addedSign.hlGroup": "GitGutterAdd",
 	"git.changedSign.hlGroup": "GitGutterChange",
 	"git.removedSign.hlGroup": "GitGutterDelete",
