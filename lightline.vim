@@ -1,5 +1,5 @@
 let g:lightline = { 
-\    'colorscheme': 'nord', 
+\    'colorscheme': 'gruvbox', 
 \    'active': { 
 \        'left': [ 
 \           ['mode', 'paste'], 
@@ -105,7 +105,7 @@ function! LightlineDiagnostic() abort
     call add(msgs, g:coc_status_error_sign . info['error'])
   endif
   if get(info, 'warning', 0)
-    call add(msgs, 'coc_status_warning_sign' . info['warning'])
+    call add(msgs, g:coc_status_warning_sign . info['warning'])
   endif
   return join(msgs, ' ')
 endfunction

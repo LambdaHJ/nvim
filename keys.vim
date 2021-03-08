@@ -88,6 +88,7 @@ let which_key_map.g =  {
             \}
 " GoTo code navigation.
 nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gs :vsp<CR><Plug>(coc-definition)
 nmap <silent> <leader>gy <Plug>(coc-type-definition)
 nmap <silent> <leader>gi <Plug>(coc-implementation)
 nmap <silent> <leader>gr <Plug>(coc-references)
@@ -109,21 +110,12 @@ nnoremap <silent> <leader>lf  :<C-u>CocList files<cr>
 " Search workspace.
 nnoremap <silent> <leader>lg  :<C-u>CocList grep<CR>
 " Search current word in current buffer
-nnoremap <silent> <leader>lw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+" nnoremap <silent> <leader>lw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+nnoremap <silent> <leader>lw  :<C-u>CocList words<CR>
 nnoremap <silent> <leader>lm  :<C-u>CocList bookmark<CR>
 " Search project
 nnoremap <silent> <leader>lp  :<C-u>CocList project<CR>
 nnoremap <silent> <leader>lr  :<C-u>CocList mru<CR>
-
-" grep word under cursor
-command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
-
-function! s:GrepArgs(...)
-  let list = ['-S', '-smartcase', '-i', '-ignorecase', '-w', '-word',
-        \ '-e', '-regex', '-u', '-skip-vcs-ignores', '-t', '-extension']
-  return join(list, "\n")
-endfunction
-
 
 "==========================================
 " window

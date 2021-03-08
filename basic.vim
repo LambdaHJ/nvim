@@ -21,15 +21,18 @@ set updatetime=1000
 set title
 set number
 set background=dark
-set termguicolors
-colorscheme nord
-" let g:gruvbox_italic=1
-" colorscheme gruvbox
+" let g:solarized_termcolors=256
+" colorscheme solarized
+
+" set termguicolors
+" colorscheme nord
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 " colorscheme PaperColor
 
 
-set cmdheight=2
+set cmdheight=1
 set laststatus=2
 set showtabline=2
 
