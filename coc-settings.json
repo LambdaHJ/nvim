@@ -1,6 +1,7 @@
 {
 	"list.source.files.excludePatterns": [
-		"**/.git/**"
+		"**/.git/**",
+		"**/vendor/**"
 	],
 	"list.indicator": "",
 	"list.insertMappings": {

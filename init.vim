@@ -12,7 +12,6 @@ function! PackagerInit() abort
 	" snippets
 	call packager#add('honza/vim-snippets')
 
-
 	call packager#add('liuchengxu/vim-which-key')
 
 	" devicons icon
@@ -42,14 +41,14 @@ function! PackagerInit() abort
 
 	call packager#add('tpope/vim-surround')
 
-	call packager#add('Lokaltog/vim-easymotion')
+	call packager#add('justinmk/vim-sneak')
 
 	call packager#add('junegunn/vim-easy-align')
 
 	call packager#add('voldikss/vim-floaterm')
 
 	" markdown preview
-	call packager#add('iamcco/markdown-preview.nvim', {'do': 'packloadall! | call mkdp#util#install()'})
+	call packager#add('iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  })
 
 	call packager#add('Yggdroot/indentLine')
 
@@ -70,6 +69,9 @@ function! PackagerInit() abort
 
 	
 	call packager#add('google/vim-jsonnet')
+	call packager#add('editorconfig/editorconfig-vim')
+
+	call packager#add('tpope/vim-dadbod')
 endfunction
 
 

@@ -26,6 +26,7 @@ set background=dark
 
 " set termguicolors
 " colorscheme nord
+let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
@@ -62,8 +63,9 @@ set splitbelow
 set noshowmode
 set noshowcmd
 set noruler
-set shortmess+=cc
+set shortmess+=c
 set shortmess+=F
+set hidden
 "==========================================
 " backup && history
 "==========================================

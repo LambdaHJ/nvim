@@ -99,8 +99,6 @@ let which_key_map.l = {
             \'o': 'outline',
             \'g': 'grep project',
             \'w': 'word in current buffer',
-            \'p': 'project',
-            \'m': 'bookmark',
             \'r': 'rencent',
             \}
 " Find symbol of current document.
@@ -112,9 +110,7 @@ nnoremap <silent> <leader>lg  :<C-u>CocList grep<CR>
 " Search current word in current buffer
 " nnoremap <silent> <leader>lw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 nnoremap <silent> <leader>lw  :<C-u>CocList words<CR>
-nnoremap <silent> <leader>lm  :<C-u>CocList bookmark<CR>
 " Search project
-nnoremap <silent> <leader>lp  :<C-u>CocList project<CR>
 nnoremap <silent> <leader>lr  :<C-u>CocList mru<CR>
 
 "==========================================

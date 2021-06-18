@@ -32,26 +32,18 @@ let g:dashboard_custom_header = [
     \'',
     \]
 
-" let g:dashboard_custom_footer="Keep It Simple, Stupid."
-
 let s:dashboard_shortcut={}
-let s:dashboard_shortcut['recently_project'] = 'SPC l p'
 let s:dashboard_shortcut['find_history'] = 'SPC l r'
 let s:dashboard_shortcut['find_file'] = 'SPC l f'
 let s:dashboard_shortcut['find_word'] = 'SPC l g'
-let s:dashboard_shortcut['book_marks'] = 'SPC l m'
 let g:dashboard_custom_section = {
-    \ 'recently_project'     :{'description':[' Recently opened project               '.s:dashboard_shortcut['recently_project']], 'command': ''},
     \ 'find_history'         :{'description':['ﭯ Recently opened files                 '.s:dashboard_shortcut['find_history']], 'command': ''},
     \ 'find_file'            :{'description':[' Find  File                            '.s:dashboard_shortcut['find_file']], 'command': ''},
     \ 'find_word'            :{'description':[' Find  word                            '.s:dashboard_shortcut['find_word']], 'command': ''},
-    \ 'book_marks'           :{'description':[' Jump to book marks                    '.s:dashboard_shortcut['book_marks']], 'command': ''},
     \ }
 
 let g:vista_default_executive = 'coc'
 let g:vista#renderer#enable_icon = 1
-
-let g:mkdp_auto_start = 1
 
 
 nmap j <Plug>(accelerated_jk_gj)
