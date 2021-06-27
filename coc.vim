@@ -9,7 +9,7 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-git',
     \ 'coc-emoji',
-    \ 'coc-python',
+    \ 'coc-pyright',
     \ 'coc-rls',
     \ 'coc-clangd',
     \ 'coc-tsserver',
@@ -18,10 +18,10 @@ let g:coc_global_extensions = [
     \ 'coc-yaml',
     \ 'coc-tasks',
     \ 'coc-go',
-    \ 'coc-tasks',
     \ 'coc-gitignore',
     \ 'coc-explorer',
-    \ 'coc-marketplace'
+    \ 'coc-marketplace',
+    \ 'coc-actions'
     \]
 
 " coc 错误信息显示

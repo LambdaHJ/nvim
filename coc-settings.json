@@ -77,7 +77,6 @@
 	},
 	"diagnostic.level": "warning",
 	"git.addGBlameToVirtualText": true,
-	"python.jediEnabled": false,
 	"git.addedSign.hlGroup": "GitGutterAdd",
 	"git.changedSign.hlGroup": "GitGutterChange",
 	"git.removedSign.hlGroup": "GitGutterDelete",

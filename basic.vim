@@ -24,11 +24,11 @@ set background=dark
 " let g:solarized_termcolors=256
 " colorscheme solarized
 
-" set termguicolors
-" colorscheme nord
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_italic=1
-colorscheme gruvbox
+set termguicolors
+colorscheme nord
+" let g:gruvbox_contrast_dark='hard'
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
 
 " colorscheme PaperColor
 

@@ -20,8 +20,7 @@ augroup cocgroup
 augroup end
 
 " 最后窗口时自动关闭 TODO(和删除buffer冲突)
-" autocmd BufEnter * nested if (winnr("$") == 1 && (&filetype == 'coc-explorer' || &filetype == 'list' || &filetype == 'packager')) | q | endif
-
+" autocmd BufEnter * nested if (winnr("$") == 1 && (&filetype == 'coc-explorer' || &filetype == 'list' || &filetype == 'packager')) | call CocCommand exlporer | endif
 
 " 打开自动定位到最后编辑的位置, 需要确认 .viminfo 当前用户可写
 if has("autocmd")
