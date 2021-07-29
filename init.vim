@@ -89,14 +89,6 @@ if filereadable(expand("~/.config/nvim/cmd.vim"))
     source ~/.config/nvim/cmd.vim
 endif
 
-if filereadable(expand("~/.config/nvim/lightline.vim"))
-    source ~/.config/nvim/lightline.vim
-endif
-
-if filereadable(expand("~/.config/nvim/coc.vim"))
-    source ~/.config/nvim/coc.vim
-endif
-
 if filereadable(expand("~/.config/nvim/keys.vim"))
     source ~/.config/nvim/keys.vim
 endif
@@ -110,6 +102,6 @@ if filereadable(expand("~/.config/nvim/experiment.vim"))
     source ~/.config/nvim/experiment.vim
 endif
 
-if filereadable(expand("~/.config/nvim/functions.vim"))
-    source ~/.config/nvim/functions.vim
+if filereadable(expand("~/.config/nvim/plugins.vim"))
+    source ~/.config/nvim/plugins.vim
 endif

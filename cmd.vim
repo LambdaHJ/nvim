@@ -37,3 +37,8 @@ autocmd FileType floaterm call s:floatermSettings()
 
 " Golang auto import on save.
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
+
+" FileType -------------------------{{{
+  autocmd FileType vim setlocal foldlevel=0 foldmethod=marker
+" }}}

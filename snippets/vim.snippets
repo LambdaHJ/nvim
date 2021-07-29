@@ -39,3 +39,15 @@ snippet plugh "vim plugin header" b
 "==========================================
 $4
 endsnippet
+
+snippet seg "vim config segment" b
+" ${1:segment name} ------------------------- {{{
+  $2
+" }}}
+endsnippet
+
+snippet vf "source vim config file" b
+if filereadable(expand("${1:file location}"))
+    source ${1:file location}
+endif
+endsnippet

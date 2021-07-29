@@ -9,13 +9,12 @@ let g:lightline = {
 \        'right': [ 
 \            ['lineinfo'],
 \            ['fileencoding'],
-\            ['battery'],
 \            ['diagnostic'],
 \        ]
 \    },
 \    'inactive': {
 \        'left': [['mode'], ['filename']],
-\        'right': [['lineinfo'], ['fileencoding'],],
+\        'right': [['lineinfo'], ['fileencoding']],
 \    },
 \    'tabline': {
 \        'left': [['buffers']],
@@ -67,7 +66,7 @@ endfunction
 
 function! LightlineGitBranch()
 	let gstatus = FugitiveHead()
-	return !has_key(s:panel_ignore, &ft) || gstatus ? ' '.gstatus : ''
+	return (!has_key(s:panel_ignore, &ft) && gstatus != '')  ? ' '.gstatus : ''
 endfunction
 
 function! LightlineFunction()
@@ -102,10 +101,10 @@ function! LightlineDiagnostic() abort
   if empty(info) | return '' | endif
   let msgs = []
   if get(info, 'error', 0)
-    call add(msgs, g:coc_status_error_sign . info['error'])
+    call add(msgs, g:coc_status_error_sign . ' '.info['error'])
   endif
   if get(info, 'warning', 0)
-    call add(msgs, g:coc_status_warning_sign . info['warning'])
+    call add(msgs, g:coc_status_warning_sign . ' '.info['warning'])
   endif
   return join(msgs, ' ')
 endfunction
