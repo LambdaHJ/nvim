@@ -25,7 +25,10 @@ set background=dark
 " colorscheme solarized
 
 set termguicolors
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
 colorscheme nord
+
 " let g:gruvbox_contrast_dark='hard'
 " let g:gruvbox_italic=1
 " colorscheme gruvbox
