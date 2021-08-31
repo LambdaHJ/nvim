@@ -6,6 +6,10 @@ set mouse=a
 syntax on
 let g:mapleader="\<Space>"
 
+" terminal model use esc.
+tnoremap <Esc> <C-\><C-n>
+
+
 set clipboard+=unnamedplus
 
 " auto save
@@ -106,3 +110,11 @@ set smartindent
 " move
 "==========================================
 set scrolloff=4
+
+"==========================================
+" fold
+"==========================================
+
+set foldmethod=syntax
+
+set foldlevelstart=99

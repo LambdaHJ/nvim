@@ -1,3 +1,8 @@
+" File: coc.vim
+" Author: heikkihuang
+" Description: coc config 
+" Last Modified: 八月 31, 2021
+
 "==========================================
 " coc Settings coc.vim基础设置
 "==========================================

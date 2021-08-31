@@ -10,7 +10,6 @@ if filereadable(expand("~/.config/nvim/plugins/lightline.vim"))
 endif
 " }}}
 
-
 " dashboard ------------------------- {{{
 if filereadable(expand("~/.config/nvim/plugins/dashboard.vim"))
     source ~/.config/nvim/plugins/dashboard.vim

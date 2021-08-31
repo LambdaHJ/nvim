@@ -6,9 +6,6 @@ autocmd VimEnter * call which_key#register('<Space>', 'g:which_key_map')
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
-" terminal model use esc.
-tnoremap <Esc> <C-\><C-n>
-
 "==========================================
 " Keys Settings  自定义快捷键设置
 "==========================================
@@ -135,7 +132,6 @@ tnoremap <Esc> <C-\><C-n>
 " }}}
 
 
-
 " Code -------------------------{{{
 let which_key_map.c = {
             \'name': "+code",
@@ -184,11 +180,13 @@ nmap <leader>ca <Plug>(EasyAlign)
               \'n': 'next',
               \'p': 'prev',
               \'f': 'fix',
+              \'r': 'refresh'
               \}
   " navigate diagnostics
   nmap <silent> <leader>dp <Plug>(coc-diagnostic-prev)
   nmap <silent> <leader>dn <Plug>(coc-diagnostic-next)
   nmap <silent> <leader>df <Plug>(coc-fix-current)
+  nmap <silent> <leader>dr <Plug>(coc-action-diagnosticRefresh)
 " }}}
 
 

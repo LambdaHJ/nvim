@@ -78,6 +78,7 @@
 		"R": "refresh"
 	},
 	"diagnostic.level": "warning",
+	"session.saveOnVimLeave": true,
 	"git.addGBlameToVirtualText": true,
 	"git.addedSign.hlGroup": "GitGutterAdd",
 	"git.changedSign.hlGroup": "GitGutterChange",

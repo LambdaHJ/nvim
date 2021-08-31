@@ -9,7 +9,7 @@ let g:lightline = {
 \        'right': [ 
 \            ['lineinfo'],
 \            ['fileencoding'],
-\            ['diagnostic'],
+\            ['diagnosticError', 'diagnosticWaring'],
 \        ]
 \    },
 \    'inactive': {
@@ -18,7 +18,7 @@ let g:lightline = {
 \    },
 \    'tabline': {
 \        'left': [['buffers']],
-\        'right': [['gitbranch', 'gitstatus'], ['cocstatus']],
+\        'right': [['gitbranch'], ['gitstatus']],
 \   },
 \    'component_function': {
 \        'mode': 'LightlineModeOrPlugin',
@@ -26,21 +26,21 @@ let g:lightline = {
 \        'filepath': 'LightLineFilepath',
 \        'fileencoding': 'LightlineFileencoding',
 \        'lineinfo': 'LightlineLineinfo',
-\        'cocstatus': 'coc#status',
 \        'curfunction': 'LightlineFunction',
 \    },
 \    'component_expand': {
-\        'diagnostic': 'LightlineDiagnostic',
+\        'diagnosticWaring': 'LightlineDiagnosticWarning',
+\        'diagnosticError': 'LightlineDiagnosticError',
 \        'buffers': 'lightline#bufferline#buffers',
 \        'gitbranch': 'LightlineGitBranch',
 \        'gitstatus': 'LightlineGitStatus',
 \	 },
 \    'component_type': {
-\        'diagnostic': 'error',
+\        'diagnosticWaring': 'warning',
+\        'diagnosticError': 'error',
 \        'buffers': 'tabsel',
 \        'gitbranch': 'tabsel',
 \        'gitstatus': 'raw',
-\        'cocstatus': 'tabsel',
 \    },
 \    'component_raw': {'buffers': 1},
 \    'separator': { 'left': '', 'right': '' },
@@ -96,15 +96,22 @@ function! LightlineGitStatus() abort
   return status
 endfunction
 
-function! LightlineDiagnostic() abort
+function! LightlineDiagnosticWarning() abort
+  let info = get(b:, 'coc_diagnostic_info', {})
+  if empty(info) | return '' | endif
+  let msgs = []
+  if get(info, 'warning', 0)
+    call add(msgs, g:coc_status_warning_sign . ' '.info['warning'])
+  endif
+  return join(msgs, ' ')
+endfunction
+
+function! LightlineDiagnosticError() abort
   let info = get(b:, 'coc_diagnostic_info', {})
   if empty(info) | return '' | endif
   let msgs = []
   if get(info, 'error', 0)
     call add(msgs, g:coc_status_error_sign . ' '.info['error'])
-  endif
-  if get(info, 'warning', 0)
-    call add(msgs, g:coc_status_warning_sign . ' '.info['warning'])
   endif
   return join(msgs, ' ')
 endfunction
